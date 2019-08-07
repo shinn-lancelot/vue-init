@@ -1,12 +1,40 @@
 const path = require('path')
 const sourcePath = path.resolve(__dirname, '../src')
 const nodeModulesPath = path.resolve(__dirname, '../node_modules')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 const baseConfig = {
-  entry: path.resolve(__dirname, '../src/main.js'),
+  entry: {
+    mobile: path.resolve(__dirname, '../src/pages/mobile/index.js'),
+    admin: path.resolve(__dirname, '../src/pages/admin/index.js'),
+  },
   output: {
-    filename: '[name].[hash].js',
-    path: path.resolve(__dirname, '../dist')
+    path: path.resolve(__dirname, '../dist'),
+    filename: 'js/[name].[chunkhash:8].js',
+    chunkFilename: 'js/[name].[chunkhash:8].js'
+  },
+  module: {
+    rules: [
+      {
+        test: /\.vue$/,
+        use: 'vue-loader'
+      },
+      {
+        test: /\.css$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          { loader: 'css-loader' }
+        ]
+      },
+      {
+        test: /\.(scss|sass)$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          { loader: 'css-loader' },
+          { loader: 'sass-loader' }
+        ]
+      }
+    ]
   },
   resolve: {
     extensions: [
