@@ -15,7 +15,8 @@
   "author": "shinn_lancelot",
   "license": "MIT",
   "dependencies": {
-    "vue": "^2.6.10"
+    "vue": "^2.6.10",
+    "vue-router": "^3.1.1"
   },
   "devDependencies": {
     "css-loader": "^3.1.0",
