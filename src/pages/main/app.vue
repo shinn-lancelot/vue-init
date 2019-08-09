@@ -1,11 +1,12 @@
 <template>
   <div>
       <div class="message">{{ msg }}</div>
+      <demo></demo>
   </div>
 </template>
 
 <script>
-  import Demo from '../../components/Demo.vue'
+  import Demo from '../../common/components/Demo.vue'
 
   export default {
     name: 'App',

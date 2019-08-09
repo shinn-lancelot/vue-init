@@ -5,8 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 const baseConfig = {
   entry: {
-    mobile: path.resolve(__dirname, '../src/pages/mobile/index.js'),
-    admin: path.resolve(__dirname, '../src/pages/admin/index.js'),
+    main: path.resolve(__dirname, '../src/pages/main/index.js'),
   },
   output: {
     path: path.resolve(__dirname, '../dist'),
