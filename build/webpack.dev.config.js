@@ -8,11 +8,23 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 const config = webpackMerge(baseConfig, {
   mode: 'development',
+  devServer: {
+    contentBase: path.join(__dirname, '../dist'),
+    index: 'main.html',
+    compress: true,
+    host: '127.0.0.1',
+    port: 1180,
+    open: true,
+    hot: true,
+    openPage: 'main.html',
+    historyApiFallback: true,
+    overlay: true
+  },
   plugins: [
     new VueLoaderPlugin(),
     new MiniCssExtractPlugin({
-      filename: 'css/[name].[hash:8].css',
-      chunkFilename: 'css/[name].[hash:8].css'
+      filename: 'css/[name].css',
+      chunkFilename: 'css/[name].css'
     }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, '../src/pages/main/index.html'),
