@@ -11,8 +11,8 @@ const config = webpackMerge(baseConfig, {
   plugins: [
     new VueLoaderPlugin(),
     new MiniCssExtractPlugin({
-      filename: 'css/[name].[hash:8].css',
-      chunkFilename: 'css/[name].[hash:8].css'
+      filename: 'css/[name].[contenthash:8].css',
+      chunkFilename: 'css/[name].[contenthash:8].css'
     }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, '../src/pages/main/index.html'),

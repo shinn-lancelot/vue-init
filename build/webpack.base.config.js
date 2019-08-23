@@ -11,9 +11,9 @@ const baseConfig = {
   output: {
     path: path.resolve(__dirname, '../dist'),
     filename: isDev ? 'js/[name].js' : 'js/[name].[hash:8].js',
-    chunkFilename: isDev ? 'js/[name].js' : 'js/[name].[hash:8].js'
+    chunkFilename: isDev ? 'js/[name].js' : 'js/[name].[chunkhash:8].js'
   },
-  devtool: 'inline-source-map',
+  devtool: 'eval-source-map',
   module: {
     rules: [
       {
@@ -74,42 +74,62 @@ const baseConfig = {
         test: /\.(gif|png|jpe?g|svg)$/i,
         use: [
           {
-            loader: 'image-webpack-loader',
-            options: {
-              mozjpeg: {
-                progressive: true,
-                quality: 65
-              },
-              optipng: {
-                enabled: false
-              },
-              pngquant: {
-                quality: '65-90',
-                speed: 4
-              },
-              gifsicle: {
-                interlaced: false
-              },
-              webp: {
-                quality: 75
-              }
-            }
-          },
-          {
             loader: 'url-loader',
             options: {
-              limit: 8192,
-              name: isDev ? 'images/[name].[ext]' : 'images/[name].[hash:8].[ext]',
+              limit: 8192, // 8192字节以下将打包成base64
+              name: isDev ? 'images/[name].[ext]' : 'images/[name].[contenthash:8].[ext]',
               publicPath: ''
             }
           },
-          { loader: 'file-loader' }
+        // {
+        //   loader: 'image-webpack-loader',
+        //   options: {
+        //     mozjpeg: {
+        //       progressive: true,
+        //       quality: 65
+        //     },
+        //     optipng: {
+        //       enabled: false
+        //     },
+        //     pngquant: {
+        //       quality: '65-90',
+        //       speed: 4
+        //     },
+        //     gifsicle: {
+        //       interlaced: false
+        //     },
+        //     webp: {
+        //       quality: 75
+        //     }
+        //   }
+        // },
+        // { loader: 'file-loader' }
         ]
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
         use: [
-          { loader: 'file-loader' }
+          {
+            loader: 'file-loader',
+            options: {
+              limit: 8192,
+              name: isDev ? 'fonts/[name].[ext]' : 'fonts/[name].[contenthash:8].[ext]',
+              publicPath: ''
+            }
+          }
+        ]
+      },
+      {
+        test: /\.(wav|mp3|ogg|ogg|mpeg4|webm)?$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              limit: 8192,
+              name: isDev ? 'medias/[name].[ext]' : 'medias/[name].[contenthash:8].[ext]',
+              publicPath: ''
+            }
+          }
         ]
       },
       {
