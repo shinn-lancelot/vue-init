@@ -6,10 +6,10 @@
 
 1. 图片、文件资源打包
 
-2. webpack开启服务，热刷新
+2. webpack 开启服务，热刷新
 
-3. 添加babel
+3. 添加 babel
 
-4. 添加eslint
+4. 添加 eslint
 
-5. 配置vue-router
+5. 配置 vue-router

@@ -1,36 +1,36 @@
 <template>
   <div>
-      <div class="message">{{ msg }}</div>
-      <demo></demo>
+    <div class="message">{{ msg }}</div>
+    <avatar></avatar>
   </div>
 </template>
 
 <script>
-  import Demo from '../../common/components/Demo.vue'
+import Avatar from "../../components/Avatar";
 
-  export default {
-    name: 'App',
-    components: {
-      Demo
-    },
-    props: {},
-    data () {
-      return {
-        msg: '666'
-      }
-    },
-    watch: {},
-    computed: {},
-    methods: {},
-    created () {},
-    mounted () {}
-  }
+export default {
+  name: "App",
+  components: {
+    Avatar
+  },
+  props: {},
+  data() {
+    return {
+      msg: "我爱前端"
+    };
+  },
+  watch: {},
+  computed: {},
+  methods: {},
+  created() {},
+  mounted() {}
+};
 </script>
 
 <style lang="scss" scoped>
-    $color: #f00;
+$color: #f00;
 
-    .message {
-        color: $color;
-    }
+.message {
+  color: $color;
+}
 </style>

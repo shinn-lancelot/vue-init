@@ -8,15 +8,11 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 const config = webpackMerge(baseConfig, {
   mode: 'development',
-  devServer: {
-    historyApiFallback: true,
-    overlay: true
-  },
   plugins: [
     new VueLoaderPlugin(),
     new MiniCssExtractPlugin({
-      filename: '../dist/css/[name].[contenthash:8].css',
-      chunkFilename: '[name].css'
+      filename: 'css/[name].[hash:8].css',
+      chunkFilename: 'css/[name].[hash:8].css'
     }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, '../src/pages/main/index.html'),
