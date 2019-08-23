@@ -53,10 +53,10 @@ const baseConfig = {
             }
           },
           { loader: 'css-loader' },
-          { 
+          {
             loader: 'sass-loader',
-            options: { 
-              sourceMap: true 
+            options: {
+              sourceMap: true
             }
           },
           {
@@ -95,6 +95,14 @@ const baseConfig = {
               }
             }
           },
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192,
+              name: isDev ? 'images/[name].[ext]' : 'images/[name].[hash:8].[ext]',
+              publicPath: ''
+            }
+          },
           { loader: 'file-loader' }
         ]
       },
@@ -102,6 +110,17 @@ const baseConfig = {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
         use: [
           { loader: 'file-loader' }
+        ]
+      },
+      {
+        test: /\.html$/,
+        use: [
+          {
+            loader: 'html-loader',
+            options: {
+              attrs: ['img:src', 'img:data-src']
+            }
+          }
         ]
       }
     ]
