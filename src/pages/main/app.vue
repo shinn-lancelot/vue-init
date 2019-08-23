@@ -32,5 +32,6 @@ $color: #f00;
 
 .message {
   color: $color;
+  box-sizing: border-box;
 }
 </style>

@@ -28,9 +28,18 @@ const baseConfig = {
             options: {
               publicPath: '../',
               hmr: isDev
-            },
+            }
           },
-          { loader: 'css-loader' }
+          { loader: 'css-loader' },
+          {
+            loader: 'postcss-loader',
+            options: {
+              sourceMap: true,
+              config: {
+                path: path.resolve(__dirname, '../postcss.config.js')
+              }
+            }
+          }
         ]
       },
       {
@@ -41,14 +50,28 @@ const baseConfig = {
             options: {
               publicPath: '../',
               hmr: isDev
-            },
+            }
           },
           { loader: 'css-loader' },
-          { loader: 'sass-loader' }
+          { 
+            loader: 'sass-loader',
+            options: { 
+              sourceMap: true 
+            }
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              sourceMap: true,
+              config: {
+                path: path.resolve(__dirname, '../postcss.config.js')
+              }
+            }
+          }
         ]
       },
       {
-        test: /\.(png|svg|jpg|gif)$/,
+        test: /\.(gif|png|jpe?g|svg)$/i,
         use: [
           {
             loader: 'image-webpack-loader',
@@ -58,14 +81,14 @@ const baseConfig = {
                 quality: 65
               },
               optipng: {
-                enabled: false,
+                enabled: false
               },
               pngquant: {
                 quality: '65-90',
                 speed: 4
               },
               gifsicle: {
-                interlaced: false,
+                interlaced: false
               },
               webp: {
                 quality: 75
