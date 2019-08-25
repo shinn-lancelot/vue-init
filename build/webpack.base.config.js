@@ -132,17 +132,18 @@ const baseConfig = {
           }
         ]
       },
-      {
-        test: /\.html$/,
-        use: [
-          {
-            loader: 'html-loader',
-            options: {
-              attrs: ['img:src', 'img:data-src']
-            }
-          }
-        ]
-      }
+      // 打包html中的图片等，暂取消，与HtmlWebpackPlugin有冲突
+      // {
+      //   test: /\.html$/,
+      //   use: [
+      //     {
+      //       loader: 'html-loader',
+      //       options: {
+      //         attrs: ['img:src', 'img:data-src']
+      //       }
+      //     }
+      //   ]
+      // }
     ]
   },
   resolve: {
