@@ -1,7 +1,7 @@
 {
-  "name": "frontend-init",
+  "name": "vue-init",
   "version": "0.0.0",
-  "description": "A frontend init project. 一个前端初始化项目。",
+  "description": "A scaffold project for vue. 一个vue脚手架项目。",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,7 +10,7 @@
     "server": "webpack-dev-server --config ./build/webpack.dev.config.js"
   },
   "keywords": [
-    "frontend-init"
+    "vue-init"
   ],
   "readme": "README.md",
   "author": "shinn_lancelot",

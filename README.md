@@ -1,6 +1,6 @@
-## frontend-init
+## vue-init
 
-> A frontend init project. 一个前端初始化项目。
+> A scaffold project for vue. 一个vue脚手架项目。
 
 ### TODO
 
