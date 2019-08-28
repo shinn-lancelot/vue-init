@@ -11,6 +11,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const UglifyjsWebpackPlugin = require('uglifyjs-webpack-plugin')
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
+const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default
 
 const config = WebpackMerge(baseConfig, {
   mode: 'production',
@@ -43,6 +44,12 @@ const config = WebpackMerge(baseConfig, {
     //     to: ''
     //   }
     // ])
+    new ImageminWebpackPlugin({
+      test: /\.(jpe?g|png|gif|svg)$/i,
+      pngquant: {
+        quality: '95-100'
+      }
+    })
   ]
 })
 
