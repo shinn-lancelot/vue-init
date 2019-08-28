@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import Avatar from "../../components/Avatar";
+import Avatar from "components/Avatar";
 
 export default {
   name: "App",

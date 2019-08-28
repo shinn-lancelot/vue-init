@@ -159,9 +159,10 @@ const baseConfig = {
       '.json'
     ],
     alias: {
-      'Api': path.resolve(__dirname, '../src/api'),
-      'Common': path.resolve(__dirname, '../src/common'),
-      'Components': path.resolve(__dirname, '../src/components'),
+      '@': path.resolve(__dirname, '../src'),
+      'api': path.resolve(__dirname, '../src/api'),
+      'common': path.resolve(__dirname, '../src/common'),
+      'components': path.resolve(__dirname, '../src/components'),
       'vue$': 'vue/dist/vue.esm.js'
     },
     modules: [

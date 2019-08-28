@@ -22,7 +22,7 @@ export default {
 .avatar {
   width: 50px;
   height: 50px;
-  background: transparent url("../common/images/avatar.jpg") no-repeat center /
+  background: transparent url("~common/images/avatar.jpg") no-repeat center /
     cover;
   border-radius: 50%;
 }

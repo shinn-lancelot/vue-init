@@ -35,7 +35,12 @@ const config = WebpackMerge(baseConfig, {
       filename: 'main.html',
       title: 'page main',
       hash: true,
-      chunks: ['main']
+      chunks: ['main'],
+      minify: {
+        removeComments: true,
+        collapseWhitespace: true,
+        minifyCSS: true
+      }
     }),
     new CleanWebpackPlugin(),
     // new CopyWebpackPlugin([
