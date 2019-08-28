@@ -2,21 +2,26 @@
   <div class="app">
     <avatar></avatar>
     <div class="name">{{ name }}</div>
+    <div class="nav">
+      <router-link to="/">home</router-link>
+      <router-link to="/hello">hello</router-link>
+    </div>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import Avatar from "components/Avatar";
+import Avatar from 'components/Avatar'
 
 export default {
-  name: "App",
+  name: 'App',
   components: {
     Avatar
   },
   props: {},
   data() {
     return {
-      name: "shinn_lancelot"
+      name: 'shinn_lancelot'
     };
   },
   watch: {},
@@ -39,6 +44,19 @@ export default {
     color: #000;
     box-sizing: border-box;
     margin-top: 10px;
+    color: #2c3e50;
+  }
+  .nav {
+    color: #f00;
+    box-sizing: border-box;
+    margin: 20px auto;
+    a {
+      font-weight: bold;
+      color: #2c3e50;
+      &.router-link-exact-active {
+        color: #42b983;
+      }
+    }
   }
 }
 </style>

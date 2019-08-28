@@ -1,14 +1,16 @@
 <template>
-  <div class="avatar"></div>
+  <p class="message">{{ message }}</p>
 </template>
 
 <script>
 export default {
-  name: 'Avatar',
+  name: 'Home',
   components: {},
   props: {},
   data() {
-    return {};
+    return {
+      message: 'This is home'
+    };
   },
   watch: {},
   computed: {},
@@ -19,11 +21,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.avatar {
-  width: 50px;
-  height: 50px;
-  background: transparent url("~common/images/avatar.jpg") no-repeat center /
-    cover;
-  border-radius: 50%;
+.message {
+  color: #000;
 }
 </style>

@@ -12,6 +12,6 @@
 
 4. 添加 eslint
 
-5. 配置 vue-router
+~~5. 配置 vue-router~~
 
 6. 添加koa或express作为中间层
