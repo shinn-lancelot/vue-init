@@ -16,13 +16,14 @@ const config = WebpackMerge(baseConfig, {
     contentBase: path.join(__dirname, '../dist'),
     index: 'main.html',
     compress: true,
-    host: '127.0.0.1',
+    host: '0.0.0.0',
     port: 1180,
     open: true,
     hot: true,
     // openPage: '',
     historyApiFallback: true,
-    overlay: true
+    overlay: true,
+    useLocalIp: true
   },
   plugins: [
     new VueLoaderPlugin(),

@@ -20,8 +20,10 @@ export default {
 
 <style lang="scss" scoped>
 .avatar {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
+  border: 3px solid #ddd;
+  box-sizing: content-box;
   background: transparent url("~common/images/avatar.jpg") no-repeat center /
     cover;
   border-radius: 50%;
