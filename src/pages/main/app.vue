@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <div class="message">{{ msg }}</div>
+  <div class="app">
     <avatar></avatar>
+    <div class="name">{{ name }}</div>
   </div>
 </template>
 
@@ -16,7 +16,7 @@ export default {
   props: {},
   data() {
     return {
-      msg: "我爱前端"
+      name: "shinn_lancelot"
     };
   },
   watch: {},
@@ -28,10 +28,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$color: #f00;
-
-.message {
-  color: $color;
+.app {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 50px;
   box-sizing: border-box;
+  .name {
+    color: #000;
+    box-sizing: border-box;
+    margin-top: 10px;
+  }
 }
 </style>
