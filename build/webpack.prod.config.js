@@ -9,12 +9,17 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const UglifyjsWebpackPlugin = require('uglifyjs-webpack-plugin')
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 
 const config = WebpackMerge(baseConfig, {
   mode: 'production',
   optimization: {
     minimizer: [
+      new UglifyjsWebpackPlugin({
+        cache: true,
+        parallel: true
+      }),
       new OptimizeCssAssetsPlugin({})
     ]
   },
