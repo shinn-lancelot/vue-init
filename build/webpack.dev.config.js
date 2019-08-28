@@ -20,7 +20,7 @@ const config = WebpackMerge(baseConfig, {
     port: 1180,
     open: true,
     hot: true,
-    openPage: 'main.html',
+    // openPage: '',
     historyApiFallback: true,
     overlay: true
   },
