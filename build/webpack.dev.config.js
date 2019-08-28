@@ -1,12 +1,16 @@
+// 常用常量
 const path = require('path')
-const webpackMerge = require('webpack-merge')
 const baseConfig = require('./webpack.base.config')
+
+// 插件，常用包
+const WebpackMerge = require('webpack-merge')
 const { VueLoaderPlugin } = require('vue-loader')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
-const config = webpackMerge(baseConfig, {
+const config = WebpackMerge(baseConfig, {
   mode: 'development',
   devServer: {
     contentBase: path.join(__dirname, '../dist'),
@@ -33,7 +37,13 @@ const config = webpackMerge(baseConfig, {
       hash: true,
       chunks: ['main']
     }),
-    new CleanWebpackPlugin()
+    new CleanWebpackPlugin(),
+    // new CopyWebpackPlugin([
+    //   {
+    //     from: '',
+    //     to: ''
+    //   }
+    // ])
   ]
 })
 

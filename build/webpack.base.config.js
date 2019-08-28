@@ -1,9 +1,13 @@
+// 常用常量
 const path = require('path')
 const isDev = process.env.NODE_ENV === 'development' ? true : false
 const sourcePath = path.resolve(__dirname, '../src')
 const nodeModulesPath = path.resolve(__dirname, '../node_modules')
+
+// 插件，常用包
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
+// 基本配置
 const baseConfig = {
   entry: {
     main: path.resolve(__dirname, '../src/pages/main/index.js')
