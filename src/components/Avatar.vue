@@ -24,7 +24,7 @@ export default {
   height: 60px;
   border: 3px solid #ddd;
   box-sizing: content-box;
-  background: transparent url("~common/images/avatar.jpg") no-repeat center /
+  background: transparent url("~assets/images/avatar.jpg") no-repeat center /
     cover;
   border-radius: 50%;
 }

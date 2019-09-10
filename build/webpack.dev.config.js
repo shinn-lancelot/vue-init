@@ -35,6 +35,7 @@ const config = WebpackMerge(baseConfig, {
       template: path.resolve(__dirname, '../src/pages/main/index.html'),
       filename: 'main.html',
       title: 'page main',
+      favicon: path.resolve(__dirname, '../src/assets/images/favicon.ico'),
       hash: true,
       chunks: ['main']
     }),
