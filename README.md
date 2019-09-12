@@ -8,10 +8,12 @@
 
 ~~2. webpack 开启服务，热刷新~~
 
-3. 添加 babel
+~~3. 添加 babel~~
 
 4. 添加 eslint
 
 ~~5. 配置 vue-router~~
 
 6. 添加koa或express作为中间层
+
+7. 添加jest测试工具
