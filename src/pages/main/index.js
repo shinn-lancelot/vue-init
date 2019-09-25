@@ -3,6 +3,8 @@ import App from './app'
 import router from 'router/main-router'
 import 'common/scss/reset'
 
+Vue.config.productionTip = false
+
 new Vue({
   router,
   render: h => h(App)
