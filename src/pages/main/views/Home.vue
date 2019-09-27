@@ -1,27 +1,33 @@
 <template>
-  <p class="message">{{ message }}</p>
+	<p class="message">{{ message }}</p>
 </template>
 
 <script>
-export default {
-  name: 'Home',
-  components: {},
-  props: {},
-  data() {
-    return {
-      message: 'This is home'
-    };
-  },
-  watch: {},
-  computed: {},
-  methods: {},
-  created() {},
-  mounted() {}
-};
+	export default {
+		name: 'Hello',
+		components: {},
+		props: {},
+		data() {
+			return {
+				message: 'This is home'
+			}
+		},
+		watch: {},
+		computed: {},
+		beforeCreate() {},
+		created() {},
+		beforeMount() {},
+		mounted() {},
+		beforeUpdate() {},
+		updated() {},
+		beforeDestroy() {},
+		destroyed() {},
+		methods: {}
+	}
 </script>
 
 <style lang="scss" scoped>
-.message {
-  color: #000;
-}
+	.message {
+		color: #000;
+	}
 </style>
