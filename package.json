@@ -7,7 +7,9 @@
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"dev": "NODE_ENV=development webpack --config ./build/webpack.dev.config.js",
 		"prod": "NODE_ENV=production webpack --config ./build/webpack.prod.config.js",
-		"start": "webpack-dev-server --config ./build/webpack.dev.config.js"
+		"start": "webpack-dev-server --config ./build/webpack.dev.config.js",
+		"lint:init": "eslint --init",
+		"lint": "eslint --fix --ext .js src"
 	},
 	"keywords": [
 		"vue-init"
@@ -30,6 +32,8 @@
 		"clean-webpack-plugin": "^3.0.0",
 		"copy-webpack-plugin": "^5.0.4",
 		"css-loader": "^3.1.0",
+		"eslint": "^6.4.0",
+		"eslint-plugin-vue": "^5.2.3",
 		"file-loader": "^4.2.0",
 		"html-loader": "^0.5.5",
 		"html-webpack-plugin": "^3.2.0",

@@ -10,7 +10,7 @@
 
 ~~3. 添加 babel~~
 
-4. 添加 eslint
+~~4. 添加 eslint~~
 
 ~~5. 配置 vue-router~~
 
