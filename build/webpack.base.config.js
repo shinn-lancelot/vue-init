@@ -171,6 +171,7 @@ const baseConfig = {
 			components: path.resolve(__dirname, '../src/components'),
 			pages: path.resolve(__dirname, '../src/pages'),
 			router: path.resolve(__dirname, '../src/router'),
+			store: path.resolve(__dirname, '../src/store'),
 			vue$: 'vue/dist/vue.esm.js'
 		},
 		modules: [sourcePath, nodeModulesPath]
