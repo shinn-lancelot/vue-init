@@ -17,3 +17,11 @@
 6. 添加koa或express作为中间层
 
 7. 添加jest测试工具
+
+~~8. 封装axios~~
+
+9. 添加vuex
+
+### 考虑添加
+
+* fastclick
