@@ -11,6 +11,10 @@
 		"lint:init": "eslint --init",
 		"lint": "eslint --fix --ext .js src"
 	},
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:shinn-lancelot/vue-init.git"
+	},
 	"keywords": [
 		"vue-init"
 	],
