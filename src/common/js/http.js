@@ -1,4 +1,5 @@
 import axios from 'axios'
+import qs from 'qs'
 
 // 默认值
 axios.defaults.baseURL = ''
@@ -7,6 +8,9 @@ axios.defaults.timeout = 5000
 // 请求拦截器
 axios.interceptors.request.use(
 	request => {
+		if (request.method === 'post') {
+			request.data = qs.stringify(request.data)
+		}
 		return request
 	},
 	error => {
@@ -14,7 +18,7 @@ axios.interceptors.request.use(
 	}
 )
 
-// 相应拦截器
+// 响应拦截器
 axios.interceptors.response.use(
 	response => {
 		return response
@@ -47,7 +51,7 @@ let get = (url, params) => {
 let post = (url, params) => {
 	return new Promise((resolve, reject) => {
 		axios
-			.get(url, params)
+			.post(url, params)
 			.then(
 				response => {
 					resolve(response)

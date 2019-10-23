@@ -39,13 +39,13 @@ const config = WebpackMerge(baseConfig, {
 			hash: true,
 			chunks: ['main']
 		}),
-		new CleanWebpackPlugin()
+		new CleanWebpackPlugin(),
 		// new CopyWebpackPlugin([
 		//   {
 		//     from: '',
 		//     to: ''
 		//   }
-		// ])
+		// ]),
 	]
 })
 

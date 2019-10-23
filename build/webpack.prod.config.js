@@ -49,7 +49,7 @@ const config = WebpackMerge(baseConfig, {
 		//     from: '',
 		//     to: ''
 		//   }
-		// ])
+		// ]),
 		new ImageminWebpackPlugin({
 			test: /\.(jpe?g|png|gif|svg)$/i,
 			pngquant: {
