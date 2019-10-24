@@ -5,8 +5,8 @@
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"dev": "NODE_ENV=development webpack --config ./build/webpack.dev.config.js",
-		"prod": "NODE_ENV=production webpack --config ./build/webpack.prod.config.js",
+		"dev": "cross-env NODE_ENV=development webpack --config ./build/webpack.dev.config.js",
+		"prod": "cross-env NODE_ENV=production webpack --config ./build/webpack.prod.config.js",
 		"start": "webpack-dev-server --config ./build/webpack.dev.config.js",
 		"lint:init": "eslint --init",
 		"lint": "eslint --fix --ext .js src"
@@ -37,6 +37,7 @@
 		"babel-loader": "^8.0.6",
 		"clean-webpack-plugin": "^3.0.0",
 		"copy-webpack-plugin": "^5.0.4",
+		"cross-env": "^6.0.3",
 		"css-loader": "^3.1.0",
 		"eslint": "^6.4.0",
 		"eslint-plugin-vue": "^5.2.3",
