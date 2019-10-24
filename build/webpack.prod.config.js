@@ -9,18 +9,38 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+
+// 插件，压缩js、css、图片
 const UglifyjsWebpackPlugin = require('uglifyjs-webpack-plugin')
+const TerserWebpackPlugin = require('terser-webpack-plugin')
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default
 
 const config = WebpackMerge(baseConfig, {
 	mode: 'production',
 	optimization: {
+		minimize: true,
 		minimizer: [
-			new UglifyjsWebpackPlugin({
+			// new UglifyjsWebpackPlugin({
+			// 	cache: true,
+			// 	parallel: true,
+			// 	uglifyOptions: {
+      //     output: {
+      //       comments: false,
+      //     },
+			// 	},
+			// 	extractComments: false,
+			// }),
+			new TerserWebpackPlugin({
 				cache: true,
-				parallel: true
-			}),
+				parallel: true,
+				terserOptions: {
+          output: {
+            comments: false,
+          },
+        },
+        extractComments: false,
+      }),
 			new OptimizeCssAssetsPlugin({})
 		]
 	},
