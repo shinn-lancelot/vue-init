@@ -12,6 +12,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 // 其它开发所需库
 const ip = require('ip').address()
+const webpack = require('webpack')
 
 const config = WebpackMerge(baseConfig, {
 	mode: 'development',
@@ -50,6 +51,7 @@ const config = WebpackMerge(baseConfig, {
 		//     to: ''
 		//   }
 		// ]),
+		new webpack.HotModuleReplacementPlugin()
 	]
 })
 
