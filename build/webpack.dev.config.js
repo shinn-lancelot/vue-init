@@ -10,20 +10,24 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 
+// 其它开发所需库
+const ip = require('ip').address()
+
 const config = WebpackMerge(baseConfig, {
 	mode: 'development',
+	stats: 'errors-only',
 	devServer: {
 		contentBase: path.join(__dirname, '../dist'),
 		index: 'main.html',
 		compress: true,
-		host: '0.0.0.0',
+		host: ip,
 		port: 1180,
-		open: true,
-		hot: true,
-		// openPage: '',
 		historyApiFallback: true,
 		overlay: true,
-		useLocalIp: true
+		hot: true,
+		open: true,
+		// openPage: '',
+		useLocalIp: true,
 	},
 	plugins: [
 		new VueLoaderPlugin(),
