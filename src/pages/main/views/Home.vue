@@ -7,21 +7,21 @@
 		name: 'Hello',
 		components: {},
 		props: {},
-		data() {
+		data () {
 			return {
 				message: 'This is home'
 			}
 		},
 		watch: {},
 		computed: {},
-		beforeCreate() {},
-		created() {},
-		beforeMount() {},
-		mounted() {},
-		beforeUpdate() {},
-		updated() {},
-		beforeDestroy() {},
-		destroyed() {},
+		beforeCreate () {},
+		created () {},
+		beforeMount () {},
+		mounted () {},
+		beforeUpdate () {},
+		updated () {},
+		beforeDestroy () {},
+		destroyed () {},
 		methods: {}
 	}
 </script>

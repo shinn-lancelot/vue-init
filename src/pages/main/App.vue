@@ -26,14 +26,14 @@
 		},
 		watch: {},
 		computed: {},
-		beforeCreate() {},
-		created() {},
-		beforeMount() {},
-		mounted() {},
+		beforeCreate () {},
+		created () {},
+		beforeMount () {},
+		mounted () {},
 		beforeUpdate() {},
-		updated() {},
-		beforeDestroy() {},
-		destroyed() {},
+		updated () {},
+		beforeDestroy () {},
+		destroyed () {},
 		methods: {}
 	}
 </script>

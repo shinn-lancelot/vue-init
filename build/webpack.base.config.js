@@ -22,7 +22,9 @@ const baseConfig = {
 		rules: [
 			{
 				test: /\.vue$/,
-				use: 'vue-loader'
+				use: [
+					{ loader: 'vue-loader' }
+				]
 			},
 			{
 				test: /\.(js|jsx)$/,
@@ -146,7 +148,15 @@ const baseConfig = {
 						}
 					}
 				]
-			}
+			},
+			{
+				test: /\.json$/,
+				use: [
+					{
+						loader: 'json-loader'
+					}
+				]
+			},
 			// 打包html中的图片等，暂取消，与HtmlWebpackPlugin有冲突
 			// {
 			//   test: /\.html$/,

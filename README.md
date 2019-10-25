@@ -22,6 +22,8 @@
 
 ~~9. 添加vuex~~
 
+10. webpack打包拆分代码
+
 ### 考虑添加
 
 * fastclick

@@ -7,19 +7,19 @@
 		name: 'Avatar',
 		components: {},
 		props: {},
-		data() {
+		data () {
 			return {}
 		},
 		watch: {},
 		computed: {},
-		beforeCreate() {},
-		created() {},
-		beforeMount() {},
-		mounted() {},
-		beforeUpdate() {},
-		updated() {},
-		beforeDestroy() {},
-		destroyed() {},
+		beforeCreate () {},
+		created () {},
+		beforeMount () {},
+		mounted () {},
+		beforeUpdate () {},
+		updated () {},
+		beforeDestroy () {},
+		destroyed () {},
 		methods: {}
 	}
 </script>
