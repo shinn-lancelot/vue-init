@@ -13,7 +13,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 // 插件，压缩js、css、图片
 const UglifyjsWebpackPlugin = require('uglifyjs-webpack-plugin')
 const TerserWebpackPlugin = require('terser-webpack-plugin')
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
+const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin')
 const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default
 
 const config = WebpackMerge(baseConfig, {
@@ -41,7 +41,7 @@ const config = WebpackMerge(baseConfig, {
         },
         extractComments: false,
       }),
-			new OptimizeCssAssetsPlugin({})
+			new OptimizeCssAssetsWebpackPlugin({})
 		]
 	},
 	plugins: [

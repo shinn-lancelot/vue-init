@@ -13,6 +13,8 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 // 其它开发所需库
 const ip = require('ip').address()
 const webpack = require('webpack')
+const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin')
+const notifier = require('node-notifier')
 
 const config = WebpackMerge(baseConfig, {
 	mode: 'development',
@@ -51,7 +53,26 @@ const config = WebpackMerge(baseConfig, {
 		//     to: ''
 		//   }
 		// ]),
-		new webpack.HotModuleReplacementPlugin()
+		new webpack.HotModuleReplacementPlugin(),
+		new FriendlyErrorsWebpackPlugin({
+			compilationSuccessInfo: {
+				message:[`App: http://${ip}:${this.port}`],
+				// notes:['']
+			},
+			onErrors:function(severity,errors){
+				if (severity !== 'error') {
+					return;
+				}
+				const error = errors[0];
+				notifier.notify({
+					title: "Webpack error",
+					message: severity + ': ' + error.name,
+					subtitle: error.file || '',
+					// icon: ''
+				})
+			},
+			clearConsole:true,
+		}),
 	]
 })
 
