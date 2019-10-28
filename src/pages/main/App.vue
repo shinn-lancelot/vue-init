@@ -19,7 +19,7 @@
 			Avatar
 		},
 		props: {},
-		data() {
+		data () {
 			return {
 				name: 'shinn_lancelot'
 			}
