@@ -26,6 +26,8 @@
 
 11. 启动服务时，在控制台显示本地地址二维码
 
+12. 添加vconsole-webpack-plugin插件
+
 ### 考虑添加
 
 * fastclick
