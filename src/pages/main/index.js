@@ -4,6 +4,7 @@ import router from 'router/main-router'
 import store from 'store/main-store'
 import FastClick from 'fastclick'
 import 'common/scss/reset'
+import 'common/scss/common'
 
 Vue.config.productionTip = false
 

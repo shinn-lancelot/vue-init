@@ -1,0 +1,41 @@
+/* 公共样式、初始样式 */
+
+@import "variables";
+
+html {
+  font-size: $font-size-root;
+}
+
+body {
+  background: $color-bg-light;
+}
+
+// 表单元素点击外框、过渡处理、边框
+input,
+textarea,
+select,
+button {
+  outline: none;
+  transition-property: all;
+  transition-duration: $transition-duration-default;
+  transition-timing-function: ease-in-out;
+  border: 1px solid $color-default;
+}
+
+// 表单元素点击后外发光、外阴影
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: $color-theme !important;
+  box-shadow: 0 0 5px 1px rgba($color-theme, .2) !important;
+}
+
+// placeholder样式处理
+input::-webkit-input-placeholder,
+input:-ms-input-placeholder,
+input:-moz-input-placeholder,
+select::-webkit-input-placeholder,
+select:-ms-input-placeholder,
+select:-moz-input-placeholder {
+  /* 设置placeholder样式 */
+}

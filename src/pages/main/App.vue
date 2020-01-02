@@ -39,28 +39,32 @@
 </script>
 
 <style lang="scss" scoped>
+	@import "~common/scss/variables";
+
 	.app {
 		display: flex;
 		flex-flow: column nowrap;
 		justify-content: flex-start;
 		align-items: center;
-		padding-top: 50px;
+		padding-top: $distance-medium * 5;
 		box-sizing: border-box;
 		.name {
-			color: #000;
+			color: $color-default;
 			box-sizing: border-box;
-			margin-top: 10px;
-			color: #2c3e50;
+			margin-top: $distance-medium;
+			color: $color-theme-dark;
+			font-size: $font-size-x-large;
 		}
 		.nav {
-			color: #000;
+			color: $color-default;
 			box-sizing: border-box;
-			margin: 20px auto;
+			margin: $distance-xxx-large auto;
+			font-size: $font-size-medium;
 			a {
-				font-weight: bold;
-				color: #2c3e50;
+				font-weight: $font-weight-ten;
+				color: $color-theme-dark;
 				&.router-link-exact-active {
-					color: #42b983;
+					color: $color-theme;
 				}
 			}
 		}

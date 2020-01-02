@@ -27,7 +27,10 @@
 </script>
 
 <style lang="scss" scoped>
+	@import "~common/scss/variables";
+
 	.message {
-		color: #000;
+		color: $color-default;
+		font-size: $font-size-medium;
 	}
 </style>
