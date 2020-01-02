@@ -2,9 +2,12 @@ import Vue from 'vue'
 import App from './App'
 import router from 'router/main-router'
 import store from 'store/main-store'
+import FastClick from 'fastclick'
 import 'common/scss/reset'
 
 Vue.config.productionTip = false
+
+FastClick.attach(document.body)
 
 new Vue({
 	router,

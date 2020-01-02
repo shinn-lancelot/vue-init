@@ -26,8 +26,10 @@
 
 11. 启动服务时，在控制台显示本地地址二维码
 
-12. 添加vconsole-webpack-plugin插件
+~~12. 添加vconsole-webpack-plugin插件~~
+
+13. 将页面配置信息剥离出来（HtmlWebpackPlugin的标题、favicon等）
 
 ### 考虑添加
 
-* fastclick
+~~* fastclick~~

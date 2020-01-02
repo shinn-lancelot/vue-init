@@ -11,9 +11,10 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 // 其它开发所需库
-const ip = require('ip').address()
 const webpack = require('webpack')
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin')
+const VConsoleWebpackPlugin = require('vconsole-webpack-plugin')
+const ip = require('ip').address()
 const notifier = require('node-notifier')
 
 const config = WebpackMerge(baseConfig, {
@@ -73,6 +74,10 @@ const config = WebpackMerge(baseConfig, {
 			},
 			clearConsole:true,
 		}),
+		new VConsoleWebpackPlugin({
+			filter: '',
+			enable: true
+		})
 	]
 })
 
