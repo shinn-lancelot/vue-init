@@ -42,8 +42,11 @@ const config = WebpackMerge(baseConfig, {
 		new HtmlWebpackPlugin({
 			template: path.resolve(__dirname, '../src/pages/main/index.html'),
 			filename: 'main.html',
-			title: 'page main',
+			meta: {
+				viewport: 'width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no',
+			},
 			favicon: path.resolve(__dirname, '../src/assets/images/favicon.ico'),
+			title: 'page main',
 			hash: true,
 			chunks: ['main']
 		}),
