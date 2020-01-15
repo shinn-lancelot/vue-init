@@ -13,6 +13,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 // 其它开发所需库
 const webpack = require('webpack')
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin')
+const QrCodeWebpackPlugin = require('webpack-dev-server-qr-code')
 const VConsoleWebpackPlugin = require('vconsole-webpack-plugin')
 const ip = require('ip').address()
 const notifier = require('node-notifier')
@@ -24,7 +25,7 @@ const config = WebpackMerge(baseConfig, {
 		contentBase: path.join(__dirname, '../dist'),
 		index: 'main.html',
 		compress: true,
-		host: ip,
+		host: '0.0.0.0',
 		port: 1180,
 		historyApiFallback: true,
 		overlay: true,
@@ -76,6 +77,9 @@ const config = WebpackMerge(baseConfig, {
 				})
 			},
 			clearConsole:true,
+		}),
+		new QrCodeWebpackPlugin({
+			size: 'small'
 		}),
 		new VConsoleWebpackPlugin({
 			filter: '',
