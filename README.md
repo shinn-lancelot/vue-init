@@ -30,6 +30,34 @@
 
 ~~13. 将页面配置信息剥离出来（HtmlWebpackPlugin的标题、favicon等）~~
 
+### 如何运行
+
+* 安装依赖包
+
+  ```shell
+    $ npm install
+  ```
+
+* 开启开发环境服务
+
+  ```shell
+    $ npm run start
+  ```
+
+### 如何构建项目
+
+* 构建开发环境代码
+
+  ```shell
+    $ npm run dev
+  ```
+
+* 构建生产环境代码
+
+  ```shell
+    $ npm run prod
+  ```
+
 ### 整理一些前端日常常用库
 
 1. 工具类
