@@ -30,6 +30,24 @@
 
 ~~13. 将页面配置信息剥离出来（HtmlWebpackPlugin的标题、favicon等）~~
 
-### 考虑添加
+### 整理一些前端日常常用库
 
-~~* fastclick~~
+1. 工具类
+
+    - [number-precision](https://github.com/nefe/number-precision)
+    - [ytools](https://github.com/hillpy/ytools)
+
+2. UI组件
+
+    - [cube-ui](https://github.com/didi/cube-ui)
+    - [element](https://github.com/ElemeFE/element)
+    - [iview](https://github.com/iview/iview)
+    - [vant](https://github.com/youzan/vant)
+
+3. 微信相关
+
+    - [weixin-js-sdk](https://github.com/yanxi-me/weixin-js-sdk)
+
+4. 动画
+
+    - [animate.css](https://github.com/daneden/animate.css)
