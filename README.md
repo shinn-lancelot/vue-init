@@ -28,7 +28,7 @@
 
 ~~12. 添加vconsole-webpack-plugin插件~~
 
-13. 将页面配置信息剥离出来（HtmlWebpackPlugin的标题、favicon等）
+~~13. 将页面配置信息剥离出来（HtmlWebpackPlugin的标题、favicon等）~~
 
 ### 考虑添加
 

@@ -10,6 +10,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 
+// 页面数据
+const pagesDataObj = require(path.resolve(__dirname, '../src/pages-data/data'))
+
 // 其它开发所需库
 const webpack = require('webpack')
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin')
@@ -41,15 +44,15 @@ const config = WebpackMerge(baseConfig, {
 			chunkFilename: 'css/[name].css'
 		}),
 		new HtmlWebpackPlugin({
-			template: path.resolve(__dirname, '../src/pages/main/index.html'),
-			filename: 'main.html',
+			template: pagesDataObj.main.template,
+			filename: pagesDataObj.main.filename,
+			title: pagesDataObj.main.title,
+			favicon: pagesDataObj.main.favicon,
+			chunks: pagesDataObj.main.chunks,
+			hash: true,
 			meta: {
 				viewport: 'width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no',
-			},
-			favicon: path.resolve(__dirname, '../src/assets/images/favicon.ico'),
-			title: 'page main',
-			hash: true,
-			chunks: ['main']
+			}
 		}),
 		new CleanWebpackPlugin(),
 		// new CopyWebpackPlugin([
