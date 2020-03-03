@@ -10,6 +10,16 @@ body {
   background: $color-bg-light;
 }
 
+// 按钮透明度
+button,
+input[type="button"] {
+  opacity: .9;
+}
+button:active,
+input[type="button"]:active {
+  opacity: 1;
+}
+
 // 表单元素点击外框、过渡处理、边框
 input,
 textarea,
@@ -19,7 +29,7 @@ button {
   transition-property: all;
   transition-duration: $transition-duration-default;
   transition-timing-function: ease-in-out;
-  border: 1px solid $color-default;
+  border: 1px solid $color-border;
 }
 
 // 表单元素点击后外发光、外阴影
