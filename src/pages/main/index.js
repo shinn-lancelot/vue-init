@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import App from './app'
 import router from 'router/main-router'
-import Store from 'store/main-store'
+import store from 'store/main-store'
 import FastClick from 'fastclick'
 import 'common/scss/reset'
 import 'common/scss/common'
@@ -12,6 +12,6 @@ FastClick.attach(document.body)
 
 new Vue({
 	router,
-	Store,
+	store,
 	render: h => h(App)
 }).$mount('#app')
