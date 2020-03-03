@@ -1,12 +1,12 @@
 import Vue from 'vue'
-import Router from 'vue-router'
+import VueRouter from 'vue-router'
 import Home from 'pages/main/views/home'
 import Hello from 'pages/main/views/hello'
 import process from 'process'
 
-Vue.use(Router)
+Vue.use(VueRouter)
 
-export default new Router({
+const router = new VueRouter({
 	// mode: 'history',
 	base: process.env.BASE_URL,
 	routes: [
@@ -22,3 +22,5 @@ export default new Router({
 		}
 	]
 })
+
+export default router
