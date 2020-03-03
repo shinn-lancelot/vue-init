@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import App from './App'
+import App from './app'
 import router from 'router/main-router'
 import store from 'store/main-store'
 import FastClick from 'fastclick'
