@@ -7,11 +7,21 @@ const nodeModulesPath = path.resolve(__dirname, '../node_modules')
 // 插件，常用包
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
+// 页面数据
+const pagesDataObj = require(path.resolve(__dirname, '../src/pages-data/data'))
+
+// entry对象
+let entry = {}
+// 遍历pagesDataObj对象，获取entry配置
+if (pagesDataObj instanceof Object) {
+  for (let key in pagesDataObj) {
+		entry[key] = pagesDataObj[key].entry
+	}
+}
+
 // 基本配置
 const baseConfig = {
-	entry: {
-		main: path.resolve(__dirname, '../src/pages/main/index.js')
-	},
+	entry: entry,
 	output: {
 		path: path.resolve(__dirname, '../dist'),
 		filename: isDev ? 'js/[name].js' : 'js/[name].[hash:8].js',
