@@ -2,47 +2,29 @@
 
 > A scaffold project for vue. 一个vue脚手架项目。
 
-### TODO
+### 特性
 
-~~1. 图片、文件资源打包~~
-
-~~2. webpack 开启服务，热刷新~~
-
-~~3. 添加 babel~~
-
-~~4. 添加 eslint~~
-
-~~5. 配置 vue-router~~
-
-6. 添加koa或express作为中间层
-
-7. 添加jest测试工具
-
-~~8. 封装axios~~
-
-~~9. 添加vuex~~
-
-10. webpack打包拆分代码
-
-~~11. 启动服务时，在控制台显示本地地址二维码~~
-
-~~12. 添加vconsole-webpack-plugin插件~~
-
-~~13. 将页面配置信息剥离出来（HtmlWebpackPlugin的标题、favicon等）~~
-
-~~14. 剥离接口请求，便于复用与维护。在api目录中添加接口请求例子
+* 支持vue全家桶
+* 代码检测
+* es6转es5
+* 代码打包压缩
+* 静态资源打包压缩
+* webpack页面配置剥离，仅需专注于开发
+* 配置了丰富的webpack插件，便于开发
+* 支持scss/sass使用
+* 多页面打包
 
 ### 如何运行
 
 * 安装依赖包
 
-  ```shell
+  ```bash
     $ npm install
   ```
 
 * 开启开发环境服务
 
-  ```shell
+  ```bash
     $ npm run start
   ```
 
@@ -50,7 +32,7 @@
 
 * 构建开发环境代码
 
-  ```shell
+  ```bash
     $ npm run dev
   ```
 
@@ -59,6 +41,12 @@
   ```shell
     $ npm run prod
   ```
+
+### TODO
+
+1. 添加koa或express作为中间层
+2. 添加jest测试工具
+3. webpack打包拆分代码
 
 ### 整理一些前端日常常用库
 
