@@ -12,12 +12,12 @@ const router = new VueRouter({
 	routes: [
 		{
 			path: '/',
-			name: 'Home',
+			name: 'home',
 			component: Home
 		},
 		{
 			path: '/hello',
-			name: 'Hello',
+			name: 'home',
 			component: Hello
 		}
 	]
