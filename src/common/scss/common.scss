@@ -41,11 +41,19 @@ select:focus {
 }
 
 // placeholder样式处理
-input::-webkit-input-placeholder,
-input:-ms-input-placeholder,
-input:-moz-input-placeholder,
-select::-webkit-input-placeholder,
-select:-ms-input-placeholder,
-select:-moz-input-placeholder {
-  /* 设置placeholder样式 */
+::-webkit-input-placeholder
+{
+
+}
+:-ms-input-placeholder
+{
+
+}
+::-moz-placeholder
+{
+
+}
+:-moz-placeholder 
+{
+  
 }
