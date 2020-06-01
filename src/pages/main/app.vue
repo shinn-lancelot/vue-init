@@ -14,7 +14,7 @@
 	import Avatar from 'components/Avatar'
 
 	export default {
-		name: 'App',
+		name: 'app',
 		components: {
 			Avatar
 		},
