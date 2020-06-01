@@ -11,7 +11,7 @@
 </template>
 
 <script>
-	import Avatar from 'components/Avatar'
+	import Avatar from 'components/avatar'
 
 	export default {
 		name: 'app',
