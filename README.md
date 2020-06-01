@@ -44,9 +44,9 @@
 
 ### TODO
 
-1. 添加koa或express作为中间层
-2. 添加jest测试工具
-3. webpack打包拆分代码
+- [ ] 添加koa或express作为中间层
+- [ ] 添加jest测试工具
+- [ ] webpack打包拆分代码
 
 ### 整理一些前端日常常用库
 
