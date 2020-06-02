@@ -68,6 +68,7 @@
 3. 微信相关
 
     - [weixin-js-sdk](https://github.com/yanxi-me/weixin-js-sdk)
+    - [wechat-jssdk](https://github.com/JasonBoy/wechat-jssdk)
 
 4. 动画
 
@@ -77,4 +78,9 @@
 
     - [vue-awesome-swiper](https://github.com/surmon-china/vue-awesome-swiper)
     - [vue-plain-slider](https://github.com/songyazhao/vue-plain-slider)
-    - [wechat-jssdk](https://github.com/JasonBoy/wechat-jssdk)
+    - 
+
+6. 骨架屏
+
+    - [page-skeleton-webpack-plugin](https://github.com/ElemeFE/page-skeleton-webpack-plugin)
+    - [vue-skeleton-webpack-plugin](https://github.com/lavas-project/vue-skeleton-webpack-plugin)

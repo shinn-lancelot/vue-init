@@ -3,11 +3,11 @@ const path = require('path')
 const isDev = process.env.NODE_ENV === 'development' ? true : false
 
 // 通用插件
-const { VueLoaderPlugin } = require('vue-loader')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { VueLoaderPlugin } = require('vue-loader')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 // 开环环境插件
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin')
@@ -45,6 +45,7 @@ if (pagesDataObj instanceof Object) {
         meta: {
           viewport: 'width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no',
         },
+        // 此参数可选值：Boolean|Object，参数选项：https://github.com/DanielRuf/html-minifier-terser
         minify: isDev ? false : {
           collapseWhitespace: true,
           removeComments: true,
@@ -52,7 +53,7 @@ if (pagesDataObj instanceof Object) {
           removeScriptTypeAttributes: true,
           removeStyleLinkTypeAttributes: true,
           useShortDoctype: true
-        } // 此参数可选值：Boolean|Object，参数选项：https://github.com/DanielRuf/html-minifier-terser
+        } 
       })
     )
   }
