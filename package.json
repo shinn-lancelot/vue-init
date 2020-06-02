@@ -1,7 +1,7 @@
 {
 	"name": "vue-init",
 	"version": "0.0.0",
-	"description": "A scaffold project for vue. 一个vue脚手架项目。",
+	"description": "A boilerplate project for vue. 一个vue脚手架项目。",
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
