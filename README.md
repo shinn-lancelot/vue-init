@@ -47,6 +47,9 @@
 - [ ] 添加koa或express作为中间层
 - [ ] 添加jest测试工具
 - [ ] webpack打包拆分代码
+- [ ] 添加骨架屏支持
+- [ ] 添加页面切换效果
+- [ ] 多页拆分，区分公共、私有样式和静态资源等
 
 ### 整理一些前端日常常用库
 
@@ -69,3 +72,9 @@
 4. 动画
 
     - [animate.css](https://github.com/daneden/animate.css)
+
+5. 滑动
+
+    - [vue-awesome-swiper](https://github.com/surmon-china/vue-awesome-swiper)
+    - [vue-plain-slider](https://github.com/songyazhao/vue-plain-slider)
+    - [wechat-jssdk](https://github.com/JasonBoy/wechat-jssdk)
