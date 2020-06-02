@@ -1,6 +1,6 @@
 ## vue-init
 
-> A boilerplate project for vue. 一个vue脚手架项目。
+> A boilerplate project for vue. 一个vue样板项目。
 
 ### 特性
 
