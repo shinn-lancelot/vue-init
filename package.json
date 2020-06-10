@@ -5,9 +5,9 @@
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"dev": "cross-env NODE_ENV=development webpack --config ./build/webpack.dev.config.js",
-		"prod": "cross-env NODE_ENV=production webpack --config ./build/webpack.prod.config.js",
-		"start": "cross-env NODE_ENV=development webpack-dev-server --config ./build/webpack.dev.config.js",
+		"dev": "cross-env NODE_ENV=development webpack --config ./build/webpack.dev.config.js --progress --colors --display-error-details",
+		"prod": "cross-env NODE_ENV=production webpack --config ./build/webpack.prod.config.js --progress --colors --display-error-details",
+		"start": "cross-env NODE_ENV=development webpack-dev-server --config --progress ./build/webpack.dev.config.js --progress --colors --display-error-details",
 		"lint:init": "eslint --init",
 		"lint": "eslint --fix --ext .js src"
 	},
