@@ -31,21 +31,22 @@ let plugins = []
 // htmlWebpackPlugins配置数组
 let htmlWebpackPlugins = []
 
-// 遍历pagesDataObj对象，将配置加入htmlWebpackPlugins配置数组
+// 部分插件每个页面的配置不同，故遍历pagesDataObj对象，配置相关插件
 if (pagesDataObj instanceof Object) {
   for (let key in pagesDataObj) {
     htmlWebpackPlugins.push(
       new HtmlWebpackPlugin({
-        template: pagesDataObj[key].template,
-        filename: pagesDataObj[key].filename,
-        title: pagesDataObj[key].title,
-        favicon: pagesDataObj[key].favicon,
-        chunks: pagesDataObj[key].chunks,
+        // 选项参考：https://github.com/jantimon/html-webpack-plugin#options
+        template: pagesDataObj[key].html.template,
+        filename: pagesDataObj[key].html.filename,
+        title: pagesDataObj[key].html.title,
+        favicon: pagesDataObj[key].html.favicon,
+        chunks: pagesDataObj[key].html.chunks,
         hash: true,
         meta: {
           viewport: 'width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no',
         },
-        // 此参数可选值：Boolean|Object，参数选项：https://github.com/DanielRuf/html-minifier-terser
+        // 此选项可选值：Boolean|Object，选项参考：https://github.com/DanielRuf/html-minifier-terser
         minify: isDev ? false : {
           collapseWhitespace: true,
           removeComments: true,

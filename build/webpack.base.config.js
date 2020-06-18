@@ -57,7 +57,7 @@ const baseConfig = {
 						options: {
 							sourceMap: true,
 							config: {
-								path: path.resolve(__dirname, '../postcss.config.js')
+								path: path.resolve(__dirname, '../postcss.config')
 							}
 						}
 					}
@@ -85,7 +85,7 @@ const baseConfig = {
 						options: {
 							sourceMap: true,
 							config: {
-								path: path.resolve(__dirname, '../postcss.config.js')
+								path: path.resolve(__dirname, '../postcss.config')
 							}
 						}
 					}
