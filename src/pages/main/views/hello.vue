@@ -9,7 +9,7 @@
 		props: {},
 		data () {
 			return {
-				message: 'Hello vue-init'
+				message: 'Hello vue-init!'
 			}
 		},
 		watch: {},
@@ -32,5 +32,7 @@
 	.message {
 		color: $color-default;
 		font-size: $font-size-medium;
+		padding: 0 10px;
+		box-sizing: border-box;
 	}
 </style>

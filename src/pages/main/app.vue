@@ -3,10 +3,12 @@
 		<avatar></avatar>
 		<div class="name">{{ name }}</div>
 		<div class="nav">
-			<router-link to="/">home</router-link> |
-			<router-link to="/hello">hello</router-link>
+			<router-link :to="{name: 'home', params: { go: false }}">home</router-link> |
+			<router-link :to="{name: 'hello', params: { go: true }}">hello</router-link>
 		</div>
-		<router-view></router-view>
+		<transition :name="transitionName">
+			<router-view></router-view>
+		</transition>
 	</div>
 </template>
 
@@ -21,10 +23,19 @@
 		props: {},
 		data () {
 			return {
+				transitionName: '',
 				name: 'shinn_lancelot'
 			}
 		},
-		watch: {},
+		watch: {
+			$route (to, from) {
+				if (this.$route.params.go) {
+					this.transitionName = 'slide-left'
+				} else {
+					this.transitionName = 'slide-right'
+				}
+			}
+		},
 		computed: {},
 		beforeCreate () {},
 		created () {},
@@ -68,5 +79,30 @@
 				}
 			}
 		}
+	}
+
+	.slide-right-enter-active,
+	.slide-right-leave-active,
+	.slide-left-enter-active,
+	.slide-left-leave-active {
+		will-change: transform;
+		transition: all 300ms;
+		position: absolute;
+	}
+	.slide-right-enter {
+		transform: translate(-100%, 0);
+		transition-timing-function: ease-in;
+	}
+	.slide-right-leave-active {
+		transform: translate(100%, 0);
+		transition-timing-function: ease-in;
+	}
+	.slide-left-enter {
+		transform: translate(100%, 0);
+		transition-timing-function: ease-in;
+	}
+	.slide-left-leave-active {
+		transform: translate(-100%, 0);
+		transition-timing-function: ease-in;
 	}
 </style>

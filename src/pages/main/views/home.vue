@@ -9,7 +9,7 @@
 		props: {},
 		data () {
 			return {
-				message: 'This is home'
+				message: 'This is a boilerplate project for vue.'
 			}
 		},
 		watch: {},
@@ -32,5 +32,7 @@
 	.message {
 		color: $color-default;
 		font-size: $font-size-medium;
+		padding: 0 10px;
+		box-sizing: border-box;
 	}
 </style>
