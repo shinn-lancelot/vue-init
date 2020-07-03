@@ -3,7 +3,7 @@
 		<avatar></avatar>
 		<div class="name">{{ name }}</div>
 		<div class="nav">
-			<router-link :to="{name: 'home', params: { go: false }}">home</router-link> |
+			<router-link :to="{name: 'home', params: { go: true }}">home</router-link> |
 			<router-link :to="{name: 'hello', params: { go: true }}">hello</router-link>
 		</div>
 		<transition :name="transitionName">
