@@ -1,11 +1,5 @@
 <template>
 	<div class="app">
-		<avatar></avatar>
-		<div class="name">{{ name }}</div>
-		<div class="nav">
-			<router-link :to="{name: 'home', params: { go: true }}">home</router-link> |
-			<router-link :to="{name: 'hello', params: { go: true }}">hello</router-link>
-		</div>
 		<transition :name="transitionName">
 			<router-view></router-view>
 		</transition>
@@ -13,18 +7,13 @@
 </template>
 
 <script>
-	import Avatar from 'components/avatar'
-
 	export default {
 		name: 'app',
-		components: {
-			Avatar
-		},
+		components: {},
 		props: {},
 		data () {
 			return {
-				transitionName: '',
-				name: 'shinn_lancelot'
+				transitionName: ''
 			}
 		},
 		watch: {
@@ -57,28 +46,7 @@
 		flex-flow: column nowrap;
 		justify-content: flex-start;
 		align-items: center;
-		padding-top: $distance-medium * 5;
 		box-sizing: border-box;
-		.name {
-			color: $color-default;
-			box-sizing: border-box;
-			margin-top: $distance-medium;
-			color: $color-theme-dark;
-			font-size: $font-size-x-large;
-		}
-		.nav {
-			color: $color-default;
-			box-sizing: border-box;
-			margin: $distance-xxx-large auto;
-			font-size: $font-size-medium;
-			a {
-				font-weight: $font-weight-ten;
-				color: $color-theme-dark;
-				&.router-link-exact-active {
-					color: $color-theme;
-				}
-			}
-		}
 	}
 
 	.slide-right-enter-active,
