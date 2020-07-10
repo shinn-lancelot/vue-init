@@ -5,6 +5,8 @@ import store from 'store/main-store'
 import FastClick from 'fastclick'
 import 'common/scss/reset'
 import 'common/scss/common'
+import 'common/scss/mixin'
+import 'common/scss/transition'
 
 Vue.config.productionTip = false
 

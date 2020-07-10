@@ -1,3 +1,6 @@
+/* 混入样式 */
+
+// 超出显示省略号
 @mixin overflow-dot {
   overflow: hidden;
   text-overflow: ellipsis;
