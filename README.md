@@ -78,7 +78,6 @@
 
     - [vue-awesome-swiper](https://github.com/surmon-china/vue-awesome-swiper)
     - [vue-plain-slider](https://github.com/songyazhao/vue-plain-slider)
-    - 
 
 6. 骨架屏
 
