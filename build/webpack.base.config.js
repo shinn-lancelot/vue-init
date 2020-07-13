@@ -33,12 +33,18 @@ const baseConfig = {
 			{
 				test: /\.vue$/,
 				use: [
-					{ loader: 'vue-loader' }
+					{
+						loader: 'vue-loader'
+					}
 				]
 			},
 			{
 				test: /\.(js|jsx)$/,
-				use: ['babel-loader?cacheDirectory=true'],
+				use: [
+					{
+						loader: 'babel-loader?cacheDirectory=true'
+					}
+				],
 				include: path.resolve(__dirname, '../src')
 			},
 			{
@@ -51,7 +57,9 @@ const baseConfig = {
 							hmr: isDev
 						}
 					},
-					{ loader: 'css-loader' },
+					{
+						loader: 'css-loader'
+					},
 					{
 						loader: 'postcss-loader',
 						options: {
@@ -73,7 +81,9 @@ const baseConfig = {
 							hmr: isDev
 						}
 					},
-					{ loader: 'css-loader' },
+					{
+						loader: 'css-loader'
+					},
 					{
 						loader: 'sass-loader',
 						options: {

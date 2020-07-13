@@ -7,7 +7,7 @@
 .slide-left-enter-active,
 .slide-left-leave-active {
   will-change: transform;
-  transition: all $transition-duration-default;
+  transition: all $transition-duration-level-3;
   position: absolute;
 }
 .slide-right-enter {

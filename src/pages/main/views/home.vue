@@ -43,6 +43,8 @@
 	@import "~common/scss/variables";
 
 	.wrapper {
+		width: $width-default;
+		overflow: hidden;
 		display: flex;
 		flex-flow: column nowrap;
 		justify-content: flex-start;

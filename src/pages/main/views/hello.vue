@@ -36,6 +36,7 @@
 	@import "~common/scss/variables";
 
 	.wrapper {
+		width: $width-default;
 		display: flex;
 		flex-flow: column nowrap;
 		justify-content: flex-start;
