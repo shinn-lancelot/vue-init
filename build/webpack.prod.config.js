@@ -16,6 +16,21 @@ const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plug
 const config = WebpackMerge(baseConfig, {
 	mode: 'production',
 	optimization: {
+		runtimeChunk: 'single',
+    splitChunks: {
+      chunks: 'all',
+      maxInitialRequests: Infinity,
+      minSize: 0,
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name (module) {
+            const packageName = module.context.match(/[\\/]node_modules[\\/](.*?)([\\/]|$)/)[1]
+            return `vendor.${packageName.replace('@', '')}`
+          },
+        },
+      },
+    },
 		minimize: true,
 		minimizer: [
 			// new UglifyjsWebpackPlugin({

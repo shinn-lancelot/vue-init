@@ -16,6 +16,7 @@ const VConsoleWebpackPlugin = require('vconsole-webpack-plugin')
 
 // 生产环境插件
 const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default
+const CompressionWebpackPlugin = require('compression-webpack-plugin')
 
 // 其它库
 const webpack = require('webpack')
@@ -121,7 +122,11 @@ if (isDev == true) {
 			pngquant: {
 				quality: '95-100'
 			}
-		})
+    }),
+    new CompressionWebpackPlugin({
+      test: /\.(js|css|html|svg)$/,
+      threshold: 4096
+    })
   ])
 }
 
