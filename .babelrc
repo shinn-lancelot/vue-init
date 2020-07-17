@@ -28,5 +28,22 @@
 		],
 		"@babel/plugin-proposal-class-properties",
 		"dynamic-import-webpack"
-	]
+	],
+	"env": {
+		"test": {
+			"presets": [
+				[
+					"@babel/preset-env",
+					{
+						"modules": "auto",
+						"targets": {
+							"browsers": ["defaults", "last 2 versions", "> 1%"]
+						},
+						"useBuiltIns": "usage",
+						"corejs": 2
+					}
+				]
+			]
+		}
+	}
 }
