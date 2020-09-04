@@ -23,16 +23,16 @@
 		watch: {
 			$route (to, from) {
 				if (this.$route.params.go) {
-					this.transitionStyleName = this.transitionNameObj.hasOwnProperty('go') ? this.transitionNameObj.go : ''
+					this.transitionStyleName = ('go' in this.transitionNameObj) ? this.transitionNameObj.go : ''
 				} else {
-					this.transitionStyleName = this.transitionNameObj.hasOwnProperty('back') ? this.transitionNameObj.back : ''
+					this.transitionStyleName = ('back' in this.transitionNameObj) ? this.transitionNameObj.back : ''
 				}
 			}
 		},
 		computed: {},
 		beforeCreate () {},
 		created () {
-			this.transitionNameObj = transition.hasOwnProperty(this.transitionName) ? transition[this.transitionName] : { go: '', back: '' }
+			this.transitionNameObj = (this.transitionName in transition) ? transition[this.transitionName] : { go: '', back: '' }
 		},
 		beforeMount () {},
 		mounted () {},
