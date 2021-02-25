@@ -7,7 +7,7 @@ const pagesDataObj = {
     html: {
       template: path.resolve(__dirname, '../pages/main/index.html'),
       filename: 'main.html',
-      favicon: path.resolve(__dirname, '../assets/images/favicon.ico'),
+      favicon: path.resolve(__dirname, '../assets/images/main/favicon.ico'),
       title: 'page main',
       chunks: ['main'],
     },

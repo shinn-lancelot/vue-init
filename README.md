@@ -54,6 +54,7 @@
 - [ ] 添加接口请求文件
 - [ ] 完善状态管理文件
 - [ ] 新增项目环境配置文件、根据不同环境做不同处理
+- [ ] 添加husky规范提交
 
 ### 整理一些前端日常常用库
 
@@ -68,6 +69,7 @@
     - [element](https://github.com/ElemeFE/element)
     - [iview](https://github.com/iview/iview)
     - [vant](https://github.com/youzan/vant)
+    - [ant-design-vue](https://github.com/vueComponent/ant-design-vue)
 
 3. 微信相关
 

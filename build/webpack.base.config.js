@@ -24,8 +24,8 @@ const baseConfig = {
 	entry: entry,
 	output: {
 		path: path.resolve(__dirname, '../dist'),
-		filename: isDev ? 'js/[name].js' : 'js/[name].[hash:8].js',
-		chunkFilename: isDev ? 'js/[name].js' : 'js/[name].[chunkhash:8].js'
+		filename: 'js/[name].[hash:8].js',
+		chunkFilename: 'js/[name].[chunkhash:8].js'
 	},
 	devtool: isDev ? 'eval-source-map' : 'none',
 	module: {
@@ -85,18 +85,18 @@ const baseConfig = {
 						loader: 'css-loader'
 					},
 					{
-						loader: 'sass-loader',
-						options: {
-							sourceMap: true
-						}
-					},
-					{
 						loader: 'postcss-loader',
 						options: {
 							sourceMap: true,
 							config: {
 								path: path.resolve(__dirname, '../postcss.config')
 							}
+						}
+					},
+					{
+						loader: 'sass-loader',
+						options: {
+							sourceMap: true
 						}
 					}
 				]
@@ -108,9 +108,7 @@ const baseConfig = {
 						loader: 'url-loader',
 						options: {
 							limit: 8192, // 8192字节以下将打包成base64
-							name: isDev
-								? 'images/[name].[ext]'
-								: 'images/[name].[contenthash:8].[ext]',
+							name: 'images/[name].[contenthash:8].[ext]',
 							publicPath: ''
 						}
 					}
@@ -146,9 +144,7 @@ const baseConfig = {
 						loader: 'file-loader',
 						options: {
 							limit: 8192,
-							name: isDev
-								? 'fonts/[name].[ext]'
-								: 'fonts/[name].[contenthash:8].[ext]',
+							name: 'fonts/[name].[contenthash:8].[ext]',
 							publicPath: ''
 						}
 					}
@@ -161,9 +157,7 @@ const baseConfig = {
 						loader: 'file-loader',
 						options: {
 							limit: 8192,
-							name: isDev
-								? 'medias/[name].[ext]'
-								: 'medias/[name].[contenthash:8].[ext]',
+							name: 'medias/[name].[contenthash:8].[ext]',
 							publicPath: ''
 						}
 					}

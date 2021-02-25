@@ -1,6 +1,36 @@
 import axios from 'axios'
 import qs from 'qs'
 
+let setGlobalDefault = (obj) => {
+	axios.defaults = updateOriginalObj(obj, axios.defaults)
+}
+
+let updateOriginalObj = (obj = {}, originalObj = {}) => {
+	console.log(obj)
+	if (originalObj instanceof Object) {
+		for (let key in originalObj) {
+			if (obj[key] in obj) {
+				if (originalObj[key] instanceof Object) {
+					originalObj[key] = this(obj[key], originalObj[key])
+				} else {
+					originalObj[key] = obj[key]
+				}
+			}
+		}
+		// Object.keys(originalObj).forEach((key) => {
+		// 	console.log(key)
+		// 	if (obj[key] in obj) {
+		// 		if (originalObj[key] instanceof Object) {
+		// 			originalObj[key] = this(obj[key], originalObj[key])
+		// 		} else {
+		// 			originalObj[key] = obj[key]
+		// 		}
+		// 	}
+		// })
+	}
+	return originalObj
+}
+
 // 默认值
 axios.defaults.baseURL = ''
 axios.defaults.timeout = 5000
@@ -66,9 +96,14 @@ let post = (url, params) => {
 	})
 }
 
-export { get, post }
+export { 
+	setGlobalDefault,
+	get,
+	post
+}
 
 export default {
+	setGlobalDefault,
 	get,
 	post
 }

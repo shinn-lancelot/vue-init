@@ -48,7 +48,7 @@
 	@import "~common/scss/variables";
 
 	.app {
-		height: calc(#{$width-window} - (#{$width-window} - #{$width-default}));
+		width: calc(#{$width-window} - (#{$width-window} - #{$width-default}));
 		height: calc(#{$height-window} - (#{$height-window} - #{$height-default}));
 		display: flex;
 		flex-flow: column nowrap;
