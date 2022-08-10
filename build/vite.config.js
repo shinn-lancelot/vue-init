@@ -24,7 +24,19 @@ export default defineConfig((config) => {
         views: path.resolve(__dirname, '../src/views'),
         router: path.resolve(__dirname, '../src/router'),
         store: path.resolve(__dirname, '../src/store')
-      }
+      },
+      extensions: [
+        '.mjs',
+        '.js',
+        '.ts',
+        '.jsx',
+        '.tsx',
+        '.json',
+        '.sass',
+        '.scss',
+        '.css',
+        // '.vue',
+      ]
     }
   }
 })
