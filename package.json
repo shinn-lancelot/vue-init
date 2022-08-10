@@ -4,7 +4,10 @@
   "description": "A boilerplate project for vue. 一个vue样板项目。",
   "main": "index.js",
   "scripts": {
-    "start": "vite --config ./build/vite.config.js"
+    "dev": "vite --config ./build/vite.config.js --mode development",
+    "test": "vite --config ./build/vite.config.js --mode test",
+    "staging": "vite --config ./build/vite.config.js --mode staging",
+    "prod": "vite --config ./build/vite.config.js --mode production"
   },
   "repository": {
     "type": "git",
