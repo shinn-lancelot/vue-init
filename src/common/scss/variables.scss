@@ -1,0 +1,59 @@
+/* 常用变量 */
+
+// 颜色
+$color-theme: #42b983;
+$color-theme-dark: #2c3e50;
+$color-default: #000;
+$color-light: #fff;
+$color-bg-light: #fff;
+$color-border: #e9eceb;
+
+// 长度
+$width-window: 100vw;
+$height-window: 100vh;
+$width-default: 100%;
+$height-default: 100%;
+$max-width-page: 750px;
+
+// 距离
+$distance-xxx-small: 2px;
+$distance-xx-small: 4px;
+$distance-x-small: 6px;
+$distance-small: 8px;
+$distance-medium: 10px;
+$distance-large: 12px;
+$distance-x-large: 16px;
+$distance-xx-large: 18px;
+$distance-xxx-large: 20px;
+
+// 字号
+$font-size-root: 10px;
+$font-size-xxx-small: 1.2rem;
+$font-size-xx-small:1.3rem;
+$font-size-x-small: 1.4rem;
+$font-size-small: 1.5rem;
+$font-size-medium: 1.6rem;
+$font-size-large: 1.7rem;
+$font-size-x-large: 1.8rem;
+$font-size-xx-large: 1.9rem;
+$font-size-xxx-large: 2rem;
+
+// 粗细
+$font-weight-one: 100;
+$font-weight-two: 200;
+$font-weight-three: 300;
+$font-weight-ten: bold;
+
+// 其它
+$transition-duration-default: 0.3s;
+$transition-duration-animation: 1s;
+$transition-duration-level-1: 0.2s;
+$transition-duration-level-2: 0.4s;
+$transition-duration-level-3: 0.6s;
+$transition-duration-level-4: 0.8s;
+$transition-duration-level-5: 1s;
+$transition-duration-level-6: 1.2s;
+$transition-duration-level-7: 1.4s;
+$transition-duration-level-8: 1.6s;
+$transition-duration-level-9: 1.8s;
+$transition-duration-level-10: 2s;

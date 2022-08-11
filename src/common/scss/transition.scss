@@ -1,0 +1,28 @@
+/* 过渡效果 */
+
+@import "variables";
+
+.slide-right-enter-active,
+.slide-right-leave-active,
+.slide-left-enter-active,
+.slide-left-leave-active {
+  will-change: transform;
+  transition: all $transition-duration-level-3;
+  position: absolute;
+}
+.slide-right-enter {
+  transform: translate(-100%, 0);
+  transition-timing-function: ease-in;
+}
+.slide-right-leave-active {
+  transform: translate(100%, 0);
+  transition-timing-function: ease-in;
+}
+.slide-left-enter {
+  transform: translate(100%, 0);
+  transition-timing-function: ease-in;
+}
+.slide-left-leave-active {
+  transform: translate(-100%, 0);
+  transition-timing-function: ease-in;
+}
