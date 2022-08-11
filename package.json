@@ -4,11 +4,11 @@
   "description": "A boilerplate project for vue. 一个vue样板项目。",
   "main": "index.js",
   "scripts": {
-    "dev": "vite --config ./build/vite.config.js",
-    "preview": "vite preview --config ./build/vite.config.js",
-    "build": "vite build --config ./build/vite.config.js",
-    "build:test": "vite build --config ./build/vite.config.js --mode test",
-    "build:staging": "vite build --config ./build/vite.config.js --mode staging"
+    "dev": "vite",
+    "preview": "vite preview",
+    "build": "vite build",
+    "build:test": "vite build --mode test",
+    "build:staging": "vite build --mode staging"
   },
   "repository": {
     "type": "git",
