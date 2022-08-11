@@ -1,5 +1,6 @@
 import { defineConfig, loadEnv } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import Unocss from 'unocss/vite'
 import path from 'path'
 
 export default defineConfig((config) => {
@@ -7,7 +8,9 @@ export default defineConfig((config) => {
   // 选项：https://cn.vitejs.dev/config/shared-options.html
   return {
     plugins: [
-      vue()
+      vue(),
+      // https://github.com/unocss/unocss
+      Unocss()
     ],
     server: {
       host: '0.0.0.0',
