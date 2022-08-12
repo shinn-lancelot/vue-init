@@ -21,6 +21,7 @@
   "author": "shinn_lancelot",
   "license": "MIT",
   "devDependencies": {
+    "@vitejs/plugin-basic-ssl": "^0.1.1",
     "@vitejs/plugin-vue": "^3.0.1",
     "sass": "^1.54.4",
     "unocss": "^0.45.5",

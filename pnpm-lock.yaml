@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@vitejs/plugin-basic-ssl': ^0.1.1
   '@vitejs/plugin-vue': ^3.0.1
   sass: ^1.54.4
   unocss: ^0.45.5
@@ -11,6 +12,7 @@ dependencies:
   vue: registry.npmmirror.com/vue/3.2.37
 
 devDependencies:
+  '@vitejs/plugin-basic-ssl': registry.npmmirror.com/@vitejs/plugin-basic-ssl/0.1.1_vite@3.0.2
   '@vitejs/plugin-vue': registry.npmmirror.com/@vitejs/plugin-vue/3.0.1_vite@3.0.2+vue@3.2.37
   sass: registry.npmmirror.com/sass/1.54.4
   unocss: registry.npmmirror.com/unocss/0.45.5_vite@3.0.2
@@ -347,6 +349,18 @@ packages:
       '@unocss/scope': registry.npmmirror.com/@unocss/scope/0.45.5
       '@unocss/transformer-directives': registry.npmmirror.com/@unocss/transformer-directives/0.45.5
       magic-string: registry.npmmirror.com/magic-string/0.26.2
+      vite: registry.npmmirror.com/vite/3.0.2_sass@1.54.4
+    dev: true
+
+  registry.npmmirror.com/@vitejs/plugin-basic-ssl/0.1.1_vite@3.0.2:
+    resolution: {integrity: sha512-UhfGAZ8HgIMEPktKF8k58Y1LSwuYs1i1O4HY8E+yiOoYM+rkaPFBZo1SOkRsZN8DZTw90Q+ZznPej1o/mtTisg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@vitejs/plugin-basic-ssl/-/plugin-basic-ssl-0.1.1.tgz}
+    id: registry.npmmirror.com/@vitejs/plugin-basic-ssl/0.1.1
+    name: '@vitejs/plugin-basic-ssl'
+    version: 0.1.1
+    engines: {node: '>=14.6.0'}
+    peerDependencies:
+      vite: ^3.0.0-beta.0
+    dependencies:
       vite: registry.npmmirror.com/vite/3.0.2_sass@1.54.4
     dev: true
 
