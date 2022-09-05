@@ -25,9 +25,11 @@
     "@vitejs/plugin-vue": "^3.0.1",
     "sass": "^1.54.4",
     "unocss": "^0.45.5",
+    "unplugin-auto-import": "^0.11.2",
     "vite": "^3.0.2"
   },
   "dependencies": {
+    "@vueuse/head": "^0.7.9",
     "axios": "^0.27.2",
     "pinia": "^2.0.18",
     "vue": "^3.2.37"
