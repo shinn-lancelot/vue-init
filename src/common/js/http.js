@@ -61,7 +61,7 @@ let get = (url, params, options) => {
 }
 
 // post请求，返回Promise
-let post = (url, params) => {
+let post = (url, params, options) => {
   return request({ url, params, method: 'post', options})
 }
 
