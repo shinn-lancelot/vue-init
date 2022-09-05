@@ -21,6 +21,7 @@ export default defineConfig((config) => {
         imports: [
           'vue',
           'vue-router',
+          '@vueuse/core',
           '@vueuse/head'
         ]
       }),

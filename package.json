@@ -30,6 +30,7 @@
     "vite": "^3.0.2"
   },
   "dependencies": {
+    "@vueuse/core": "^9.1.1",
     "@vueuse/head": "^0.7.9",
     "axios": "^0.27.2",
     "pinia": "^2.0.18",
