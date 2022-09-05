@@ -3,6 +3,7 @@ import vue from '@vitejs/plugin-vue'
 import basicSsl from '@vitejs/plugin-basic-ssl'
 import unocss from 'unocss/vite'
 import autoImport from 'unplugin-auto-import/vite'
+import components from 'unplugin-vue-components/vite'
 import path from 'path'
 
 export default defineConfig((config) => {
@@ -22,6 +23,12 @@ export default defineConfig((config) => {
           'vue-router',
           '@vueuse/head'
         ]
+      }),
+      // https://github.com/antfu/unplugin-vue-components
+      components({
+        dirs: ['src/components'],
+        extensions: ['vue'],
+        include: [/\.vue$/, /\.vue\?vue/]
       })
     ],
     server: {
