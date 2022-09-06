@@ -17,7 +17,7 @@
 - [x] vue3支持
 - [x] pnpm支持
 - [ ] pinia支持
-- [ ] vue-router支持
+- [x] vue-router支持
 - [x] api自动导入支持
 - [x] 组件自动导入支持
 - [x] eslint支持
