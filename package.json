@@ -44,6 +44,7 @@
     "unplugin-vue-components": "^0.22.4",
     "vite": "^3.0.2",
     "vite-plugin-pages": "^0.26.0",
+    "vite-plugin-qrcode": "^0.2.0",
     "vite-plugin-vconsole": "^1.2.2",
     "vite-plugin-vue-markdown": "^0.21.1"
   }

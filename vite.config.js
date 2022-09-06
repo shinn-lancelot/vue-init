@@ -8,6 +8,7 @@ import components from 'unplugin-vue-components/vite'
 import markdown from 'vite-plugin-vue-markdown'
 import pages from 'vite-plugin-pages'
 import { viteVConsole } from 'vite-plugin-vconsole'
+import { qrcode } from 'vite-plugin-qrcode'
 
 export default defineConfig((config) => {
   // 获取环境供配置需要 const env = loadEnv(config.mode, process.cwd())
@@ -72,6 +73,9 @@ export default defineConfig((config) => {
           theme: 'dark',
         },
       }),
+
+      // https://github.com/svitejs/vite-plugin-qrcode
+      qrcode(),
     ],
 
     server: {
