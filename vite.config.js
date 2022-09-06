@@ -9,6 +9,7 @@ import markdown from 'vite-plugin-vue-markdown'
 import pages from 'vite-plugin-pages'
 import { viteVConsole } from 'vite-plugin-vconsole'
 import { qrcode } from 'vite-plugin-qrcode'
+import progress from 'vite-plugin-progress'
 
 export default defineConfig((config) => {
   // 获取环境供配置需要 const env = loadEnv(config.mode, process.cwd())
@@ -76,6 +77,9 @@ export default defineConfig((config) => {
 
       // https://github.com/svitejs/vite-plugin-qrcode
       qrcode(),
+
+      // https://github.com/jeddygong/vite-plugin-progress
+      progress(),
     ],
 
     server: {
