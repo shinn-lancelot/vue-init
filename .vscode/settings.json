@@ -16,6 +16,8 @@
     "pausable",
     "Triggerable",
     "Heiti",
-    "Quan"
+    "Quan",
+    "vconsole",
+    "qrcode"
   ]
 }
