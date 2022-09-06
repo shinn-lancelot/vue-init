@@ -17,6 +17,7 @@ export default defineConfig((config) => {
   // 获取环境供配置需要 const env = loadEnv(config.mode, process.cwd())
   loadEnv(config.mode, process.cwd())
   const { command, mode } = config
+
   // 选项：https://cn.vitejs.dev/config/shared-options.html
   return {
     plugins: [
@@ -125,6 +126,14 @@ export default defineConfig((config) => {
         '.scss',
         '.css',
         // '.vue',
+      ],
+    },
+
+    // https://cn.vitest.dev/config/
+    test: {
+      include: [
+        'test/**/*.test.js',
+        'test/**/*.test.ts',
       ],
     },
   }

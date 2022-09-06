@@ -22,7 +22,7 @@
 - [x] 组件自动导入支持
 - [x] eslint支持
 - [ ] pwa支持
-- [ ] vitest支持
+- [x] vitest支持
 - [x] vueuse支持
 - [x] 支持md
 - [ ] ...

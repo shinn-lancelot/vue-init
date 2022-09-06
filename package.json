@@ -19,7 +19,8 @@
     "build:test": "vite build --mode test",
     "build:staging": "vite build --mode staging",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "test": "vitest"
   },
   "readme": "README.md",
   "dependencies": {
@@ -49,6 +50,7 @@
     "vite-plugin-qrcode": "^0.2.0",
     "vite-plugin-vconsole": "^1.2.2",
     "vite-plugin-vue-images": "^0.6.1",
-    "vite-plugin-vue-markdown": "^0.21.1"
+    "vite-plugin-vue-markdown": "^0.21.1",
+    "vitest": "^0.23.1"
   }
 }
