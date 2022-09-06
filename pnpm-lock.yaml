@@ -15,8 +15,10 @@ specifiers:
   unocss: ^0.45.5
   unplugin-auto-import: ^0.11.2
   unplugin-vue-components: ^0.22.4
+  vconsole: ^3.14.6
   vite: ^3.0.2
   vite-plugin-pages: ^0.26.0
+  vite-plugin-vconsole: ^1.2.2
   vite-plugin-vue-markdown: ^0.21.1
   vue: ^3.2.37
   vue-router: ^4.1.5
@@ -27,6 +29,7 @@ dependencies:
   axios: registry.npmmirror.com/axios/0.27.2
   pinia: registry.npmmirror.com/pinia/2.0.18_bw4xur2vyhvhfd4whxbr7emp4u
   qs: registry.npmmirror.com/qs/6.11.0
+  vconsole: registry.npmmirror.com/vconsole/3.14.6
   vue: registry.npmmirror.com/vue/3.2.37
   vue-router: registry.npmmirror.com/vue-router/4.1.5_vue@3.2.37
 
@@ -42,6 +45,7 @@ devDependencies:
   unplugin-vue-components: registry.npmmirror.com/unplugin-vue-components/0.22.4_vite@3.0.2+vue@3.2.37
   vite: registry.npmmirror.com/vite/3.0.2_sass@1.54.4
   vite-plugin-pages: registry.npmmirror.com/vite-plugin-pages/0.26.0_vite@3.0.2
+  vite-plugin-vconsole: registry.npmmirror.com/vite-plugin-vconsole/1.2.2
   vite-plugin-vue-markdown: registry.npmmirror.com/vite-plugin-vue-markdown/0.21.1_vite@3.0.2
 
 packages:
@@ -221,6 +225,15 @@ packages:
     hasBin: true
     dependencies:
       '@babel/types': registry.npmmirror.com/@babel/types/7.18.9
+
+  registry.npmmirror.com/@babel/runtime/7.19.0:
+    resolution: {integrity: sha512-eR8Lo9hnDS7tqkO7NsV+mKvCmv5boaXFSZ70DnfhcgiEne8hv9oCEd36Klw74EtizEqLsy4YnW8UWwpBVolHZA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@babel/runtime/-/runtime-7.19.0.tgz}
+    name: '@babel/runtime'
+    version: 7.19.0
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      regenerator-runtime: registry.npmmirror.com/regenerator-runtime/0.13.9
+    dev: false
 
   registry.npmmirror.com/@babel/types/7.18.9:
     resolution: {integrity: sha512-WwMLAg2MvJmt/rKEVQBBhIVffMmnilX4oe0sRe7iPOHIGsqpruFHHdrfj4O1CMMtgMtCU4oPafZjDPCRgO57Wg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@babel/types/-/types-7.18.9.tgz}
@@ -1333,6 +1346,20 @@ packages:
     name: consola
     version: 2.15.3
     dev: true
+
+  registry.npmmirror.com/copy-text-to-clipboard/3.0.1:
+    resolution: {integrity: sha512-rvVsHrpFcL4F2P8ihsoLdFHmd404+CMg71S756oRSeQgqk51U3kicGdnvfkrxva0xXH92SjGS62B0XIJsbh+9Q==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/copy-text-to-clipboard/-/copy-text-to-clipboard-3.0.1.tgz}
+    name: copy-text-to-clipboard
+    version: 3.0.1
+    engines: {node: '>=12'}
+    dev: false
+
+  registry.npmmirror.com/core-js/3.25.0:
+    resolution: {integrity: sha512-CVU1xvJEfJGhyCpBrzzzU1kjCfgsGUxhEvwUV2e/cOedYWHdmluamx+knDnmhqALddMG16fZvIqvs9aijsHHaA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/core-js/-/core-js-3.25.0.tgz}
+    name: core-js
+    version: 3.25.0
+    requiresBuild: true
+    dev: false
 
   registry.npmmirror.com/cross-spawn/7.0.3:
     resolution: {integrity: sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/cross-spawn/-/cross-spawn-7.0.3.tgz}
@@ -3430,6 +3457,12 @@ packages:
     version: 2.1.2
     dev: true
 
+  registry.npmmirror.com/mutation-observer/1.0.3:
+    resolution: {integrity: sha512-M/O/4rF2h776hV7qGMZUH3utZLO/jK7p8rnNgGkjKUw8zCGjRQPxB8z6+5l8+VjRUQ3dNYu4vjqXYLr+U8ZVNA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/mutation-observer/-/mutation-observer-1.0.3.tgz}
+    name: mutation-observer
+    version: 1.0.3
+    dev: false
+
   registry.npmmirror.com/nanoid/3.3.4:
     resolution: {integrity: sha512-MqBkQh/OHTS2egovRtLk45wEyNXwF+cokD+1YPf9u5VfJiRdAiRwB2froX5Co9Rh20xs4siNPm8naNotSD6RBw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/nanoid/-/nanoid-3.3.4.tgz}
     name: nanoid
@@ -3891,6 +3924,12 @@ packages:
     dependencies:
       picomatch: registry.npmmirror.com/picomatch/2.3.1
     dev: true
+
+  registry.npmmirror.com/regenerator-runtime/0.13.9:
+    resolution: {integrity: sha512-p3VT+cOEgxFsRRA9X4lkI1E+k2/CtnKtU4gcxyaCUreilL/vqI6CdZ3wxVUx3UOUg+gnUOQQcRI7BmSI656MYA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/regenerator-runtime/-/regenerator-runtime-0.13.9.tgz}
+    name: regenerator-runtime
+    version: 0.13.9
+    dev: false
 
   registry.npmmirror.com/regexp-tree/0.1.24:
     resolution: {integrity: sha512-s2aEVuLhvnVJW6s/iPgEGK6R+/xngd2jNQ+xy4bXNDKxZKJH6jpPHY6kVeVv1IeLCHgswRj+Kl3ELaDjG6V1iw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/regexp-tree/-/regexp-tree-0.1.24.tgz}
@@ -4563,6 +4602,17 @@ packages:
       spdx-expression-parse: registry.npmmirror.com/spdx-expression-parse/3.0.1
     dev: true
 
+  registry.npmmirror.com/vconsole/3.14.6:
+    resolution: {integrity: sha512-8Ffk2SfNe6EzKqZ0aNnNjpAVBVT7zgJo81lYEJdKySYLVYBeSawdSkWi9fSjDg3WsQhgS1vNPmRqJDTuwdVbnQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vconsole/-/vconsole-3.14.6.tgz}
+    name: vconsole
+    version: 3.14.6
+    dependencies:
+      '@babel/runtime': registry.npmmirror.com/@babel/runtime/7.19.0
+      copy-text-to-clipboard: registry.npmmirror.com/copy-text-to-clipboard/3.0.1
+      core-js: registry.npmmirror.com/core-js/3.25.0
+      mutation-observer: registry.npmmirror.com/mutation-observer/1.0.3
+    dev: false
+
   registry.npmmirror.com/vite-plugin-pages/0.26.0_vite@3.0.2:
     resolution: {integrity: sha512-yJZvwHEt7puYIf19S89IvkDsWPjWleSied4H8hmdW6i8buCA93z1UAU1ipW1d8fNKrC4FzXsUHHbPm6+kl1p9w==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vite-plugin-pages/-/vite-plugin-pages-0.26.0.tgz}
     id: registry.npmmirror.com/vite-plugin-pages/0.26.0
@@ -4587,6 +4637,12 @@ packages:
       yaml: registry.npmmirror.com/yaml/2.1.1
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  registry.npmmirror.com/vite-plugin-vconsole/1.2.2:
+    resolution: {integrity: sha512-eB0uyQzEQAijpxxcgnE9h/k0y6Lr5wiYeq+OW/4hPT7sNwd4KVqMKQXArTn5S6zy8Uo7ae7ulAU3atczekAGAw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vite-plugin-vconsole/-/vite-plugin-vconsole-1.2.2.tgz}
+    name: vite-plugin-vconsole
+    version: 1.2.2
     dev: true
 
   registry.npmmirror.com/vite-plugin-vue-markdown/0.21.1_vite@3.0.2:

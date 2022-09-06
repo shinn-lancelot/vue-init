@@ -7,20 +7,26 @@ import autoImport from 'unplugin-auto-import/vite'
 import components from 'unplugin-vue-components/vite'
 import markdown from 'vite-plugin-vue-markdown'
 import pages from 'vite-plugin-pages'
+import { viteVConsole } from 'vite-plugin-vconsole'
 
 export default defineConfig((config) => {
   // 获取环境供配置需要 const env = loadEnv(config.mode, process.cwd())
   loadEnv(config.mode, process.cwd())
+  const { command, mode } = config
   // 选项：https://cn.vitejs.dev/config/shared-options.html
   return {
     plugins: [
+      // https://github.com/vitejs/vite/tree/main/packages/plugin-vue
       vue({
         include: [/\.vue$/, /\.md$/],
       }),
+
       // https://github.com/vitejs/vite-plugin-basic-ssl
       // basicSsl(),
+
       // https://github.com/unocss/unocss
       unocss(),
+
       // https://github.com/antfu/unplugin-auto-import
       autoImport({
         imports: [
@@ -36,6 +42,7 @@ export default defineConfig((config) => {
           'src/store',
         ],
       }),
+
       // https://github.com/antfu/unplugin-vue-components
       components({
         dirs: ['src/components'],
@@ -43,8 +50,10 @@ export default defineConfig((config) => {
         dts: 'src/components.d.ts',
         include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
       }),
+
       // https://github.com/antfu/vite-plugin-vue-markdown
       markdown(),
+
       // https://github.com/hannoeru/vite-plugin-pages
       pages({
         dirs: [
@@ -52,12 +61,25 @@ export default defineConfig((config) => {
         ],
         extensions: ['vue', 'md'],
       }),
+
+      // https://github.com/vadxq/vite-plugin-vconsole
+      viteVConsole({
+        entry: [path.resolve('src/main.js')],
+        localEnabled: command === 'serve',
+        enabled: command !== 'serve' || mode === 'test',
+        config: {
+          maxLogNumber: 1000,
+          theme: 'dark',
+        },
+      }),
     ],
+
     server: {
       host: '0.0.0.0',
       port: 1180,
       open: '/index.html',
     },
+
     resolve: {
       alias: {
         '~': path.resolve(__dirname, 'src'),

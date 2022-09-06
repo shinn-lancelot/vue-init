@@ -28,6 +28,7 @@
     "axios": "^0.27.2",
     "pinia": "^2.0.18",
     "qs": "^6.11.0",
+    "vconsole": "^3.14.6",
     "vue": "^3.2.37",
     "vue-router": "^4.1.5"
   },
@@ -43,6 +44,7 @@
     "unplugin-vue-components": "^0.22.4",
     "vite": "^3.0.2",
     "vite-plugin-pages": "^0.26.0",
+    "vite-plugin-vconsole": "^1.2.2",
     "vite-plugin-vue-markdown": "^0.21.1"
   }
 }
