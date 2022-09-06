@@ -10,6 +10,8 @@ import pages from 'vite-plugin-pages'
 import { viteVConsole } from 'vite-plugin-vconsole'
 import { qrcode } from 'vite-plugin-qrcode'
 import progress from 'vite-plugin-progress'
+import viteCompression from 'vite-plugin-compression'
+import viteImages from 'vite-plugin-vue-images'
 
 export default defineConfig((config) => {
   // 获取环境供配置需要 const env = loadEnv(config.mode, process.cwd())
@@ -80,6 +82,18 @@ export default defineConfig((config) => {
 
       // https://github.com/jeddygong/vite-plugin-progress
       progress(),
+
+      // https://github.com/vbenjs/vite-plugin-compression
+      viteCompression({
+        filter: /\.(jpg|jpeg|png|svg|webp|js|mjs|json|css|html)$/i,
+      }),
+
+      // https://github.com/sampullman/vite-plugin-vue-images
+      viteImages({
+        dirs: [
+          'src/assets/images',
+        ],
+      }),
     ],
 
     server: {

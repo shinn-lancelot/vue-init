@@ -43,10 +43,12 @@
     "unplugin-auto-import": "^0.11.2",
     "unplugin-vue-components": "^0.22.4",
     "vite": "^3.0.2",
+    "vite-plugin-compression": "^0.5.1",
     "vite-plugin-pages": "^0.26.0",
     "vite-plugin-progress": "^0.0.3",
     "vite-plugin-qrcode": "^0.2.0",
     "vite-plugin-vconsole": "^1.2.2",
+    "vite-plugin-vue-images": "^0.6.1",
     "vite-plugin-vue-markdown": "^0.21.1"
   }
 }
