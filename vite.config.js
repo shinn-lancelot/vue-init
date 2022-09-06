@@ -4,6 +4,7 @@ import basicSsl from '@vitejs/plugin-basic-ssl'
 import unocss from 'unocss/vite'
 import autoImport from 'unplugin-auto-import/vite'
 import components from 'unplugin-vue-components/vite'
+import markdown from 'vite-plugin-vue-markdown'
 import path from 'path'
 
 export default defineConfig((config) => {
@@ -11,7 +12,9 @@ export default defineConfig((config) => {
   // 选项：https://cn.vitejs.dev/config/shared-options.html
   return {
     plugins: [
-      vue(),
+      vue({
+        include: [/\.vue$/, /\.md$/]
+      }),
       // https://github.com/vitejs/vite-plugin-basic-ssl
       // basicSsl(),
       // https://github.com/unocss/unocss
@@ -28,9 +31,11 @@ export default defineConfig((config) => {
       // https://github.com/antfu/unplugin-vue-components
       components({
         dirs: ['src/components'],
-        extensions: ['vue'],
-        include: [/\.vue$/, /\.vue\?vue/]
-      })
+        extensions: ['vue', 'md'],
+        include: [/\.vue$/, /\.vue\?vue/, /\.md$/]
+      }),
+      // https://github.com/antfu/vite-plugin-vue-markdown
+      markdown()
     ],
     server: {
       host: '0.0.0.0',
