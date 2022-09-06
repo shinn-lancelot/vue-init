@@ -20,9 +20,9 @@
 - [ ] vue-router支持
 - [x] api自动导入支持
 - [x] 组件自动导入支持
-- [ ] eslint支持
+- [x] eslint支持
 - [ ] pwa支持
 - [ ] vitest支持
-- [ ] vueuse支持
-- [ ] 支持md导入
+- [x] vueuse支持
+- [x] 支持md
 - [ ] ...

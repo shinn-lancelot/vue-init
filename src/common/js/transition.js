@@ -1,11 +1,11 @@
 // 视图页面过渡动画名称
-let transition = {
+const transition = {
   slide: {
     go: 'slide-left',
-    back: 'slide-right'
-  }
+    back: 'slide-right',
+  },
 }
 
 export {
-  transition
+  transition,
 }

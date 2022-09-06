@@ -2,14 +2,8 @@
   "name": "vue-init",
   "version": "1.0.0",
   "description": "A boilerplate project for vue. 一个vue样板项目。",
-  "main": "index.js",
-  "scripts": {
-    "dev": "vite",
-    "preview": "vite preview",
-    "build": "vite build",
-    "build:test": "vite build --mode test",
-    "build:staging": "vite build --mode staging"
-  },
+  "author": "shinn_lancelot",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git@github.com:shinn-lancelot/vue-init.git"
@@ -17,24 +11,35 @@
   "keywords": [
     "vue-init"
   ],
-  "readme": "README.md",
-  "author": "shinn_lancelot",
-  "license": "MIT",
-  "devDependencies": {
-    "@vitejs/plugin-basic-ssl": "^0.1.1",
-    "@vitejs/plugin-vue": "^3.0.1",
-    "sass": "^1.54.4",
-    "unocss": "^0.45.5",
-    "unplugin-auto-import": "^0.11.2",
-    "unplugin-vue-components": "^0.22.4",
-    "vite": "^3.0.2",
-    "vite-plugin-vue-markdown": "^0.21.1"
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "preview": "vite preview",
+    "build": "vite build",
+    "build:test": "vite build --mode test",
+    "build:staging": "vite build --mode staging",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
+  "readme": "README.md",
   "dependencies": {
     "@vueuse/core": "^9.1.1",
     "@vueuse/head": "^0.7.9",
     "axios": "^0.27.2",
     "pinia": "^2.0.18",
     "vue": "^3.2.37"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.26.3",
+    "@vitejs/plugin-basic-ssl": "^0.1.1",
+    "@vitejs/plugin-vue": "^3.0.1",
+    "eslint": "^8.23.0",
+    "sass": "^1.54.4",
+    "typescript": "^4.8.2",
+    "unocss": "^0.45.5",
+    "unplugin-auto-import": "^0.11.2",
+    "unplugin-vue-components": "^0.22.4",
+    "vite": "^3.0.2",
+    "vite-plugin-vue-markdown": "^0.21.1"
   }
 }
