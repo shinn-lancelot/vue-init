@@ -30,6 +30,11 @@ export default defineConfig((config) => {
           '@vueuse/head',
         ],
         dts: 'src/auto-imports.d.ts',
+        dirs: [
+          'src/api',
+          'src/common/js',
+          'src/store',
+        ],
       }),
       // https://github.com/antfu/unplugin-vue-components
       components({
@@ -55,6 +60,7 @@ export default defineConfig((config) => {
     },
     resolve: {
       alias: {
+        '~': path.resolve(__dirname, 'src'),
         '@': path.resolve(__dirname, 'src'),
         'api': path.resolve(__dirname, 'src/api'),
         'assets': path.resolve(__dirname, 'src/assets'),
