@@ -1,13 +1,13 @@
 import http from 'common/js/http'
 
 // get接口请求示例
-const getExample = (data) => {
-  return http.get('/get', data)
+const getExample = (data, options) => {
+  return http.get('/get', data, options)
 }
 
 // post接口请求示例
-const postExample = (data) => {
-  return http.post('/post', data)
+const postExample = (data, options) => {
+  return http.post('/post', data, options)
 }
 
 export {
