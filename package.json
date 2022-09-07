@@ -4,6 +4,7 @@
   "description": "A boilerplate project for vue. 一个vue样板项目。",
   "author": "shinn_lancelot",
   "license": "MIT",
+  "private": true,
   "repository": {
     "type": "git",
     "url": "git@github.com:shinn-lancelot/vue-init.git"

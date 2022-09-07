@@ -1,6 +1,7 @@
 <script setup>
 import favicon from 'assets/images/favicon.ico'
 
+// https://github.com/vueuse/head
 useHead({
   title: import.meta.env.VITE_APP_TITLE,
   meta: [
@@ -14,7 +15,5 @@ useHead({
 </script>
 
 <template>
-  <div>
-    This is a boilerplate project for vue.
-  </div>
+  <router-view />
 </template>
