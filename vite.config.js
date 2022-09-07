@@ -69,7 +69,9 @@ export default defineConfig((config) => {
 
       // https://github.com/vadxq/vite-plugin-vconsole
       viteVConsole({
-        entry: [path.resolve('src/main.js')],
+        entry: [
+          path.resolve(__dirname, 'src/main.js'),
+        ],
         localEnabled: command === 'serve',
         enabled: command !== 'serve' || mode === 'test',
         config: {
