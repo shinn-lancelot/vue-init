@@ -2,6 +2,9 @@ lockfileVersion: 5.4
 
 specifiers:
   '@antfu/eslint-config': ^0.26.3
+  '@iconify-json/carbon': ^1.1.7
+  '@unocss/preset-icons': ^0.45.18
+  '@unocss/preset-web-fonts': ^0.45.18
   '@unocss/reset': ^0.45.18
   '@vitejs/plugin-basic-ssl': ^0.1.1
   '@vitejs/plugin-vue': ^3.0.1
@@ -42,6 +45,9 @@ dependencies:
 
 devDependencies:
   '@antfu/eslint-config': registry.npmmirror.com/@antfu/eslint-config/0.26.3_yqf6kl63nyoq5megxukfnom5rm
+  '@iconify-json/carbon': registry.npmmirror.com/@iconify-json/carbon/1.1.7
+  '@unocss/preset-icons': registry.npmmirror.com/@unocss/preset-icons/0.45.18
+  '@unocss/preset-web-fonts': registry.npmmirror.com/@unocss/preset-web-fonts/0.45.18
   '@vitejs/plugin-basic-ssl': registry.npmmirror.com/@vitejs/plugin-basic-ssl/0.1.1_vite@3.0.2
   '@vitejs/plugin-vue': registry.npmmirror.com/@vitejs/plugin-vue/3.0.1_vite@3.0.2+vue@3.2.37
   eslint: registry.npmmirror.com/eslint/8.23.0
@@ -305,6 +311,14 @@ packages:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz}
     name: '@humanwhocodes/object-schema'
     version: 1.2.1
+    dev: true
+
+  registry.npmmirror.com/@iconify-json/carbon/1.1.7:
+    resolution: {integrity: sha512-QULSpNWKaX4auIbjITDynfALdJYvOOy/xZb+aLOqCgvpBcmbz5tbqvow4r25FWtVsi4FHVpNQ8vyJZXsD1Hlxg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@iconify-json/carbon/-/carbon-1.1.7.tgz}
+    name: '@iconify-json/carbon'
+    version: 1.1.7
+    dependencies:
+      '@iconify/types': registry.npmmirror.com/@iconify/types/1.1.0
     dev: true
 
   registry.npmmirror.com/@iconify/types/1.1.0:
@@ -705,6 +719,12 @@ packages:
       unconfig: registry.npmmirror.com/unconfig/0.3.5
     dev: true
 
+  registry.npmmirror.com/@unocss/core/0.45.18:
+    resolution: {integrity: sha512-506GHQX8/TpKNZ96k4ujSWp5SpcsZZnwwTg9NcLf7M3y5BXEwv0dE7Jfz7eJiFm2G+RYEgrXwYk7y7dFF8evxA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@unocss/core/-/core-0.45.18.tgz}
+    name: '@unocss/core'
+    version: 0.45.18
+    dev: true
+
   registry.npmmirror.com/@unocss/core/0.45.5:
     resolution: {integrity: sha512-6boP8sGTRb+nE87pdjii7otO/tguIlDkFh90E6mglA0XdjHWiLCCNlgJoxgjCGCPNYUm/Nojx0bUbcokuqBZDw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@unocss/core/-/core-0.45.5.tgz}
     name: '@unocss/core'
@@ -726,6 +746,18 @@ packages:
     version: 0.45.5
     dependencies:
       '@unocss/core': registry.npmmirror.com/@unocss/core/0.45.5
+    dev: true
+
+  registry.npmmirror.com/@unocss/preset-icons/0.45.18:
+    resolution: {integrity: sha512-yIakBbRfVeytfKNXrmQn0pAlTxYY7aBgIoyAYDFzr308f0XuSTBVpdN9lSx7n/Rfv6xuxn+tulwKNiIATY0rbw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@unocss/preset-icons/-/preset-icons-0.45.18.tgz}
+    name: '@unocss/preset-icons'
+    version: 0.45.18
+    dependencies:
+      '@iconify/utils': registry.npmmirror.com/@iconify/utils/1.0.33
+      '@unocss/core': registry.npmmirror.com/@unocss/core/0.45.18
+      ohmyfetch: registry.npmmirror.com/ohmyfetch/0.4.18
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   registry.npmmirror.com/@unocss/preset-icons/0.45.5:
@@ -772,6 +804,15 @@ packages:
       '@unocss/core': registry.npmmirror.com/@unocss/core/0.45.5
       '@unocss/preset-mini': registry.npmmirror.com/@unocss/preset-mini/0.45.5
       '@unocss/preset-wind': registry.npmmirror.com/@unocss/preset-wind/0.45.5
+    dev: true
+
+  registry.npmmirror.com/@unocss/preset-web-fonts/0.45.18:
+    resolution: {integrity: sha512-4at40i82yTYp89RghDryaH1bNgwh5l/QSbmnnn827W1vxSbG6WTtHwqkecXckI3HmrQ6kKw4b1M7rNB9g6WJiw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@unocss/preset-web-fonts/-/preset-web-fonts-0.45.18.tgz}
+    name: '@unocss/preset-web-fonts'
+    version: 0.45.18
+    dependencies:
+      '@unocss/core': registry.npmmirror.com/@unocss/core/0.45.18
+      ohmyfetch: registry.npmmirror.com/ohmyfetch/0.4.18
     dev: true
 
   registry.npmmirror.com/@unocss/preset-web-fonts/0.45.5:

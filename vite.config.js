@@ -69,6 +69,7 @@ export default defineConfig((config) => {
       }),
 
       // https://github.com/unocss/unocss
+      // 此处不配置，直接在unocss.config.js中配置
       Unocss(),
 
       // https://github.com/vbenjs/vite-plugin-compression

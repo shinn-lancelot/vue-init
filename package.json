@@ -1,10 +1,10 @@
 {
   "name": "vue-init",
   "version": "1.0.0",
+  "private": true,
   "description": "A boilerplate project for vue. 一个vue样板项目。",
   "author": "shinn_lancelot",
   "license": "MIT",
-  "private": true,
   "repository": {
     "type": "git",
     "url": "git@github.com:shinn-lancelot/vue-init.git"
@@ -37,6 +37,9 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.26.3",
+    "@iconify-json/carbon": "^1.1.7",
+    "@unocss/preset-icons": "^0.45.18",
+    "@unocss/preset-web-fonts": "^0.45.18",
     "@vitejs/plugin-basic-ssl": "^0.1.1",
     "@vitejs/plugin-vue": "^3.0.1",
     "eslint": "^8.23.0",

@@ -11,7 +11,7 @@
 - [ ] pwa支持
 - [x] 校验命名（大小写问题）
 - [x] 文件名大小写
-- [ ] Unocss配置完善
+- [x] Unocss配置完善
 - [ ] http.js完善
 - [ ] pinia完善
 - [ ] README完善
