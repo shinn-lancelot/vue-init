@@ -1,17 +1,17 @@
 import path from 'path'
 import { defineConfig, loadEnv } from 'vite'
-import vue from '@vitejs/plugin-vue'
-// import basicSsl from '@vitejs/plugin-basic-ssl'
-import unocss from 'unocss/vite'
-import autoImport from 'unplugin-auto-import/vite'
-import components from 'unplugin-vue-components/vite'
-import markdown from 'vite-plugin-vue-markdown'
-import pages from 'vite-plugin-pages'
+import Vue from '@vitejs/plugin-vue'
+import AutoImport from 'unplugin-auto-import/vite'
+import Components from 'unplugin-vue-components/vite'
+import ViteImages from 'vite-plugin-vue-images'
+import Markdown from 'vite-plugin-vue-markdown'
+import Pages from 'vite-plugin-pages'
+import Unocss from 'unocss/vite'
+import ViteCompression from 'vite-plugin-compression'
+// import BasicSsl from '@vitejs/plugin-basic-ssl'
+import Progress from 'vite-plugin-progress'
 import { viteVConsole } from 'vite-plugin-vconsole'
 import { qrcode } from 'vite-plugin-qrcode'
-import progress from 'vite-plugin-progress'
-import viteCompression from 'vite-plugin-compression'
-import viteImages from 'vite-plugin-vue-images'
 
 export default defineConfig((config) => {
   // 获取环境供配置需要 const env = loadEnv(config.mode, process.cwd())
@@ -22,18 +22,12 @@ export default defineConfig((config) => {
   return {
     plugins: [
       // https://github.com/vitejs/vite/tree/main/packages/plugin-vue
-      vue({
+      Vue({
         include: [/\.vue$/, /\.md$/],
       }),
 
-      // https://github.com/vitejs/vite-plugin-basic-ssl
-      // basicSsl(),
-
-      // https://github.com/unocss/unocss
-      unocss(),
-
       // https://github.com/antfu/unplugin-auto-import
-      autoImport({
+      AutoImport({
         imports: [
           'vue',
           'vue-router',
@@ -49,23 +43,44 @@ export default defineConfig((config) => {
       }),
 
       // https://github.com/antfu/unplugin-vue-components
-      components({
+      Components({
         dirs: ['src/components'],
         extensions: ['vue', 'md'],
         dts: 'src/components.d.ts',
         include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
       }),
 
+      // https://github.com/sampullman/vite-plugin-vue-images
+      ViteImages({
+        dirs: [
+          'src/assets/images',
+        ],
+      }),
+
       // https://github.com/antfu/vite-plugin-vue-markdown
-      markdown(),
+      Markdown(),
 
       // https://github.com/hannoeru/vite-plugin-pages
-      pages({
+      Pages({
         dirs: [
           { dir: 'src/pages', baseRoute: '' },
         ],
         extensions: ['vue', 'md'],
       }),
+
+      // https://github.com/unocss/unocss
+      Unocss(),
+
+      // https://github.com/vbenjs/vite-plugin-compression
+      ViteCompression({
+        filter: /\.(jpg|jpeg|png|svg|webp|js|mjs|json|css|html)$/i,
+      }),
+
+      // https://github.com/vitejs/vite-plugin-basic-ssl
+      // BasicSsl(),
+
+      // https://github.com/jeddygong/vite-plugin-progress
+      Progress(),
 
       // https://github.com/vadxq/vite-plugin-vconsole
       viteVConsole({
@@ -82,21 +97,6 @@ export default defineConfig((config) => {
 
       // https://github.com/svitejs/vite-plugin-qrcode
       qrcode(),
-
-      // https://github.com/jeddygong/vite-plugin-progress
-      progress(),
-
-      // https://github.com/vbenjs/vite-plugin-compression
-      viteCompression({
-        filter: /\.(jpg|jpeg|png|svg|webp|js|mjs|json|css|html)$/i,
-      }),
-
-      // https://github.com/sampullman/vite-plugin-vue-images
-      viteImages({
-        dirs: [
-          'src/assets/images',
-        ],
-      }),
     ],
 
     server: {
@@ -134,8 +134,7 @@ export default defineConfig((config) => {
     // https://cn.vitest.dev/config/
     test: {
       include: [
-        'test/**/*.test.js',
-        'test/**/*.test.ts',
+        'test/**/*.test.{js,ts}',
       ],
     },
   }
