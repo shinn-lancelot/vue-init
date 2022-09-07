@@ -5,6 +5,7 @@ import App from './App.vue'
 import routes from '~pages'
 
 // 如果不用Unocss，可以使用scss。common/scss目录下包含一些初始样式
+import '@unocss/reset/tailwind.css'
 import 'uno.css'
 
 const app = createApp(App)
