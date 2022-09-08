@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "antfu.iconify",
+    "antfu.unocss",
+    "antfu.vite",
+    "antfu.goto-alias",
+    "dbaeumer.vscode-eslint",
+    "vue.volar",
+    "streetsidesoftware.code-spell-checker"
+  ]
+}

@@ -15,6 +15,6 @@
 - [x] http.js完善
 - [ ] pinia完善
 - [ ] README完善
-- [ ] .vscode中添加插件文件
+- [x] .vscode中添加插件文件
 - [ ] 规范git提交
 - [x] index页面编写
