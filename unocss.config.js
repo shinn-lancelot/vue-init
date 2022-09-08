@@ -10,7 +10,9 @@ export default defineConfig({
     // https://github.com/unocss/unocss
     presetUno(),
     // https://github.com/unocss/unocss/tree/main/packages/preset-icons
-    presetIcons(),
+    presetIcons({
+      scale: 1.2,
+    }),
     // https://github.com/unocss/unocss/tree/main/packages/preset-web-fonts
     // presetWebFonts(),
   ],

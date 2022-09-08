@@ -17,4 +17,4 @@
 - [ ] README完善
 - [ ] .vscode中添加插件文件
 - [ ] 规范git提交
-- [ ] index页面编写
+- [x] index页面编写
