@@ -74,7 +74,7 @@ export default defineConfig((config) => {
 
       // https://github.com/vbenjs/vite-plugin-compression
       ViteCompression({
-        filter: /\.(jpg|jpeg|png|svg|webp|js|mjs|json|css|html)$/i,
+        filter: /\.(js|mjs|json|css|html)$/i,
       }),
 
       // https://github.com/vitejs/vite-plugin-basic-ssl
