@@ -12,6 +12,7 @@ import ViteCompression from 'vite-plugin-compression'
 import Progress from 'vite-plugin-progress'
 import { viteVConsole } from 'vite-plugin-vconsole'
 import { qrcode } from 'vite-plugin-qrcode'
+import colors from 'picocolors'
 
 export default defineConfig((config) => {
   // 获取环境供配置需要 const env = loadEnv(config.mode, process.cwd())
@@ -81,7 +82,9 @@ export default defineConfig((config) => {
       // BasicSsl(),
 
       // https://github.com/jeddygong/vite-plugin-progress
-      Progress(),
+      Progress({
+        format: `${colors.green(colors.bold('Bouilding'))} ${colors.cyan('[:bar]')} :percent`,
+      }),
 
       // https://github.com/vadxq/vite-plugin-vconsole
       viteVConsole({
