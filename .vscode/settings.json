@@ -18,6 +18,12 @@
     "Heiti",
     "Quan",
     "vconsole",
-    "qrcode"
+    "qrcode",
+    "Bouilding",
+    "picocolors",
+    "iconify",
+    "vitejs",
+    "axios",
+    "vitest"
   ]
 }
