@@ -32,6 +32,7 @@ export default defineConfig((config) => {
         imports: [
           'vue',
           'vue-router',
+          'pinia',
           '@vueuse/core',
           '@vueuse/head',
         ],

@@ -13,7 +13,7 @@
 - [x] 文件名大小写
 - [x] Unocss配置完善
 - [x] http.js完善
-- [ ] pinia完善
+- [x] pinia完善
 - [ ] README完善
 - [x] .vscode中添加插件文件
 - [ ] 规范git提交

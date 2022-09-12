@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
 import { createHead } from '@vueuse/head'
 import { createRouter, createWebHashHistory } from 'vue-router'
+import { createPinia } from 'pinia'
 import App from './App.vue'
 import routes from '~pages'
 
@@ -14,7 +15,9 @@ const router = createRouter({
   history: createWebHashHistory(),
   routes,
 })
+const pinia = createPinia()
 
 app.use(head)
 app.use(router)
+app.use(pinia)
 app.mount('#app')
