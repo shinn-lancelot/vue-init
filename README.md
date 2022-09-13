@@ -2,19 +2,41 @@
 
 > A boilerplate project for vue. 一个vue样板项目。
 
-## 状态
+## 特性
 
-当前vue3版本开发中
+* ✌️ 支持Vue3、Vite3
+* 🧰 使用pnpm作为包管理工具
+* 🗃️ 支持基于文件路由
+* 🖇️ 支持组件自动导入
+* 🖇️ 支持Composition API、es模块等自动导入
+* 🍍 使用pinia进行状态管理
+* 🎨 使用UnoCSS和sass处理样式
+* 📄 支持Markdown
+* 🚀 封装axios
+* 🔧 使用Vitest作为测试工具
+* 🖼️ 图片自动导入
+* ✂️ 使用gzip压缩资源
+* 😁 支持typescript
+* 🎛️ 终端打印页面地址二维码
+* 🖨️ 支持vconsole
+* ➡️ 打包进度条美化
+* 📦 添加vueuse库
 
-## TODO
 
-- [ ] pwa支持
-- [x] 校验命名（大小写问题）
-- [x] 文件名大小写
-- [x] Unocss配置完善
-- [x] http.js完善
-- [x] pinia完善
-- [ ] README完善
-- [x] .vscode中添加插件文件
-- [ ] 规范git提交
-- [x] index页面编写
+## 使用
+
+推荐安装pnpm，然后执行以下命令开启服务，访问http://localhost:1180即可开始开发
+
+```bash
+  pnpm dev
+```
+
+执行以下命令，将会生成dist目录，用于生产环境
+
+```bash
+  pnpm build
+```
+
+## 感谢
+
+感谢[antfu](https://github.com/antfu)大佬的[vitesse](https://github.com/antfu/vitesse)等一系列开源项目
