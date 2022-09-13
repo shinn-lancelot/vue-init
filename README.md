@@ -23,6 +23,7 @@
 * 🖨️ 支持vconsole
 * ➡️ 打包进度条美化
 * 📦 添加vueuse库
+* 🖥️ 支持netlify部署
 
 
 ## 使用
