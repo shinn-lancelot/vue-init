@@ -25,7 +25,7 @@
 
 ## 使用
 
-推荐安装pnpm，然后执行以下命令开启服务，访问http://localhost:1180即可开始开发
+推荐安装pnpm，然后执行以下命令开启服务，访问http://localhost:1180
 
 ```bash
   pnpm dev
