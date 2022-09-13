@@ -3,4 +3,4 @@
 
 [build]
   public = "dist"
-  command = "pnpm i && pnpm run build"
+  command = "npx pnpm i && npx pnpm run build"

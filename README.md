@@ -1,5 +1,7 @@
 ## vue-init
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/43a07b92-ff71-4d9c-86d7-5c512963a81f/deploy-status)](https://app.netlify.com/sites/vueinit/deploys)
+
 > A boilerplate project for vue. 一个vue样板项目。
 
 ## 特性
