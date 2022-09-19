@@ -136,6 +136,29 @@ export default defineConfig((config) => {
       ],
     },
 
+    build: {
+      minify: 'terser',
+
+      // https://terser.org/docs/api-reference#minify-options
+      terserOptions: {
+        compress: {
+          drop_console: true,
+        },
+        format: {
+          comments: false,
+        },
+      },
+
+      // https://rollupjs.org/guide/en/#big-list-of-options
+      rollupOptions: {
+        output: {
+          assetFileNames: 'assets/[ext]/[name].[hash].[ext]',
+          chunkFileNames: 'assets/js/[name].[hash].js',
+          entryFileNames: 'assets/js/[name].[hash].js',
+        },
+      },
+    },
+
     // https://cn.vitest.dev/config/
     test: {
       include: [
