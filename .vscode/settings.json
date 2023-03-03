@@ -3,27 +3,5 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  "editor.formatOnSave": false,
-  "cSpell.words": [
-    "unocss",
-    "unplugin",
-    "vueuse",
-    "shinn",
-    "pinia",
-    "antfu",
-    "VITE",
-    "Destructurable",
-    "pausable",
-    "Triggerable",
-    "Heiti",
-    "Quan",
-    "vconsole",
-    "qrcode",
-    "Bouilding",
-    "picocolors",
-    "iconify",
-    "vitejs",
-    "axios",
-    "vitest"
-  ]
+  "editor.formatOnSave": false
 }
