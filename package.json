@@ -28,7 +28,7 @@
     "@unocss/reset": "^0.45.18",
     "@vueuse/core": "^9.1.1",
     "@vueuse/head": "^0.7.9",
-    "axios": "^0.27.2",
+    "axios": "^1.6.0",
     "pinia": "^2.0.18",
     "qs": "^6.11.0",
     "vconsole": "^3.14.6",
